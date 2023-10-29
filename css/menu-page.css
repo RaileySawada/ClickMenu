@@ -1,0 +1,29 @@
+body{
+    background-image: url("../images/backgrounds/menubackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.dish{
+    width: 200px;
+}
+.search-bar{
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+.dish-menu{
+    height: 500px;
+    margin-left: 40px;
+}
+.dish-info{
+    display: inline-block;
+    width: 230px;
+    height: 350px;
+    margin-right: 30px;
+    background-color: blueviolet;
+    padding: 20px;
+    border-radius: 10px;
+    vertical-align: top;
+}

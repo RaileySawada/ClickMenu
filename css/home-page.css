@@ -1,0 +1,59 @@
+body{
+    background-image: url('../images/backgrounds/homebackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
+}
+.home-pic{
+    display: inline-block;
+    width: 700px;
+    margin-left: -280px;
+}
+.texts{
+    display: inline-block;
+    top: 165px;
+    right: 0;
+}
+.texts p, .texts a{
+    margin-right: 100px;
+    text-decoration: none;
+}
+.text1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 80px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    word-spacing: 15px;
+    color: white;
+    display: block;
+}
+.text2{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 900;
+    font-family: 'Agbalumo',sans-serif;
+    font-size: 50px;
+    color: blueviolet;
+    word-spacing: 15px;
+    display: block;
+}
+.order-btn-cont{
+    text-align: center;
+    margin-top: 80px;
+}
+.order-btn{
+    display: inline;
+    text-align: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 70px;
+    color: white;
+}

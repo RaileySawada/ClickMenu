@@ -1,0 +1,22 @@
+body{
+    background-image: url("/images/backgrounds/homebackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.reservation-form p, .note{
+    color: white;
+}
+.reservation-form, .note{
+    display: inline-block;
+    background-color: rgba(137, 43, 226, 0.307);
+    border-radius: 5px;
+    padding: 10px;
+    vertical-align: top;
+}
+.note{
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
+}

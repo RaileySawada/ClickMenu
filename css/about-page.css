@@ -1,0 +1,30 @@
+body{
+    background-image: url("/images/backgrounds/aboutbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.about-info p{
+    width: 700px;
+    text-align: center;
+    margin-left: 80px;
+}
+.welcome-txt{
+    font-family: 'Overlock', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    color: blueviolet;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    margin: 0;
+}
+.about-txt{
+    font-size: 18px;
+    color: white;
+    font-family: 'Palanquin Dark', 'Consolas', sans-serif;
+}
+.horizontal-rule{
+    width: 800px;
+    margin-bottom: 50px;
+}
