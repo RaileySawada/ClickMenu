@@ -12,14 +12,22 @@ header{
     font-size: 26px;
     color: white;
     box-shadow: 2px 0 5px 3px rgb(0, 0, 0);
+    justify-content: space-between;
+}
+.logo-cont{
+    margin-left: 60px;
+    width: 65px;
+    height: 65px;
 }
 .logo{
-    width: 100px;
-    height: 130px;
-    margin-left: 40px;
+    width: 65px;
+    height: 65px;
     object-fit: cover;
     object-position: center;
     border-radius: 50px;
+}
+.home-link{
+    margin-left: 20px;
 }
 nav{
     flex: 1;

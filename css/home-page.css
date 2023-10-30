@@ -25,7 +25,7 @@ main{
     text-decoration: none;
 }
 .text1{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Unbounded', sans-serif;
     font-weight: 900;
     font-size: 80px;
     margin-top: 40px;
@@ -52,7 +52,7 @@ main{
 .order-btn{
     display: inline;
     text-align: center;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 70px;
     color: white;

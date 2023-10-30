@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <a href="../index.html"><img class="logo" src="../images/logo.png" alt="ClickMenu-Logo"></a>
+            <a class="logo-cont" href="../index.html"><img class="logo" src="../images/logo.png" alt="ClickMenu-Logo"></a>
             <a class="home-link" href="../index.html"><p>ClickMenu</p></a>
             <nav>
                 <ul>
@@ -27,14 +27,26 @@
             </nav>
         </header>
         <main>
-            <div class="search-bar">
-                <input type="text" placeholder="Search Food" style="display: inline;">
-                <button style="display: inline-block;">Search</button>
+            <div class="subheader">
+                <div class="selector-cont">
+                    <select name="availableDishes" id="selector" title="selection">
+                        <option value="1">All</option>
+                        <option value="2">Monday</option>
+                        <option value="3">Tuesday</option>
+                        <option value="4">Wednesday</option>
+                        <option value="5">Thursday</option>
+                        <option value="6">Friday</option>
+                    </select>
+                </div>
+                <div class="search-cont">
+                    <input class="search-bar" type="text" placeholder="Search Food">
+                    <button class="search-btn" type="submit" title="search"><img class="search" src="../images/search-btn.png" alt=""></button>
+                </div>
             </div>
             <div class="dish-menu">
                 <!--First Dish-->
                 <div class="dish-info">
-                    <div>
+                    <div class="dish-cont">
                         <img class="dish" src="../images/dishes/porksinigang.png" alt="Pork Sinigang">
                     </div>
                     <div>
@@ -65,7 +77,7 @@
                             <p>Beef Bulalo</p>
                         </div>
                         <div>
-                            <p>₱ 300</p>
+                            <p>₱ 200</p>
                             <p>per order</p>
                         </div>
                     </div>
@@ -81,7 +93,23 @@
                             <p>Beef Kare-kare</p>
                         </div>
                         <div>
-                            <p>₱ 300</p>
+                            <p>₱ 75</p>
+                            <p>per order</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Fourth Dish-->
+                <div class="dish-info">
+                    <div>
+                        <img class="dish" src="../images/dishes/porkadobo.jpg" alt="Beef Kare-kare">
+                    </div>
+                    <div>
+                        <div>
+                            <p>Pork Adobo</p>
+                        </div>
+                        <div>
+                            <p>₱ 80</p>
                             <p>per order</p>
                         </div>
                     </div>

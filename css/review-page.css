@@ -56,8 +56,10 @@ main{
 }
 .user-review p{
     color: white;
-    font-size: 18px;
+    font-size: 14.5px;
     margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 .dquote, .star{
     width: 80px;
@@ -83,6 +85,7 @@ main{
     justify-content: space-between;
 }
 .question{
+    font-family: 'Unbounded', sans-serif;
     color: white;
     display: inline-block;
     vertical-align: middle;
@@ -93,16 +96,21 @@ main{
     letter-spacing: 2px;
     margin: 0 0 30px 0;
 }
+.awesome-txt{
+    font-family: 'Poppins', sans-serif;
+}
 .review-creator, .pen{
     display: inline-block;
 }
 .pen{
     width: 30px;
     margin-right: 15px;
-    vertical-align: top;
+    vertical-align: bottom;
 }
 .review-creator{
     color: white;
+    font-family: 'Montserrat', sans-serif;
+    vertical-align: bottom;
     font-size: 20px;
     font-weight: 800;
     margin: 0;

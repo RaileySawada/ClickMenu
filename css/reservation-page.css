@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/backgrounds/reservationbackground.jpg");
+    background-image: url("../images/backgrounds/homebackground.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,6 +8,9 @@ body{
 .reservation-form p, .note{
     color: white;
 }
+.reservation-form p{
+    font-family: 'Unbounded', sans-serif;
+}
 .reservation-form, .note{
     display: inline-block;
     background-color: rgba(137, 43, 226, 0.307);
@@ -15,8 +18,12 @@ body{
     padding: 10px;
     vertical-align: top;
 }
+.reservation-form::placeholder, .reservation-form input, .reservation-form button{
+    font-family: 'Montserrat', sans-serif;
+}
 .note{
-    width: 100px;
+    width: 200px;
     margin-left: 20px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
