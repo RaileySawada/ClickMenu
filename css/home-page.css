@@ -44,6 +44,7 @@ main{
     color: blueviolet;
     word-spacing: 15px;
     display: block;
+    text-align: center;
 }
 .order-btn-cont{
     text-align: center;
@@ -56,4 +57,34 @@ main{
     font-weight: 500;
     font-size: 70px;
     color: white;
+}
+@media (max-width: 320px) {
+    .home-pic{
+        display: none;
+    }
+    .texts p, .texts a{
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    .texts{
+        text-align: center;
+    }
+    .text1{
+        font-size: 50px;
+        margin-top: 0;
+    }
+    .text2{
+        font-size: 20px;
+        margin: 20px 0 0 0;
+    }
+    .order-btn-cont{
+        margin-top: 48px;
+    }
+    .order-btn{
+        font-size: 40px;
+    }
+    hr{
+        width: 180px;
+        margin-bottom: 40px;
+    }
 }
