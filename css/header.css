@@ -13,18 +13,19 @@ header{
     color: white;
     box-shadow: 2px 0 5px 3px rgb(0, 0, 0);
     justify-content: space-between;
+    padding: 0 80px;
+}
+.hamburger-menu{
+    width: 65px;
+    display: none;
 }
 .logo-cont{
-    margin-left: 60px;
+    margin: 0;
     width: 65px;
     height: 65px;
 }
 .logo{
     width: 65px;
-    height: 65px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50px;
 }
 .home-link{
     margin-left: 20px;
@@ -32,19 +33,21 @@ header{
 nav{
     flex: 1;
     text-align: right;
-    margin-right: 100px;
+}
+nav ul{
+    padding: 0;
 }
 nav ul li{
     list-style: none;
     display: inline-block;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 ul li a, .home-link{
     text-decoration: none;
     color: white;
 }
 .submenu{
-    right: 150px;
+    right: 100px;
     margin-top: 20px;
     opacity: 0;
     position: absolute;
@@ -64,4 +67,46 @@ li:hover ul.submenu{
 .submenu li a{
     color: black;
     margin-bottom: 10px;
+}
+@media (max-width: 1048px){
+    header{
+        padding: 0 25px;
+    }
+}
+@media (max-width: 910px){
+    nav ul li{
+        margin-left: 20px;
+    }
+}
+@media (max-width: 775px){
+    nav ul{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+        float: right;
+    }
+}
+@media (max-width: 320px){
+    nav ul{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+        float: right;
+        width: 30px;
+    }
+    .home-link, .logo-cont{
+        display: flex;
+    }
+    .logo, .logo-cont{
+        width: 40px;
+        height: 40px;
+    }
+    .home-link{
+        font-size: 16px;
+    }
+    header{
+        height: 70px;
+    }
 }
