@@ -73,12 +73,7 @@ li:hover ul.submenu{
         padding: 0 25px;
     }
 }
-@media (max-width: 910px){
-    nav ul li{
-        margin-left: 20px;
-    }
-}
-@media (max-width: 775px){
+@media (max-width: 975px){
     nav ul{
         display: none;
     }
@@ -87,7 +82,7 @@ li:hover ul.submenu{
         float: right;
     }
 }
-@media (max-width: 320px){
+@media (max-width: 376px){
     nav ul{
         display: none;
     }
