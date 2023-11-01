@@ -76,17 +76,19 @@ main{
     }
     .texts{
         text-align: center;
+        margin-bottom: 40px;
     }
     .text1{
         font-size: 50px;
         margin-top: 0;
+        margin-bottom: 100px;
     }
     .text2{
         font-size: 20px;
         margin: 20px 0 0 0;
     }
     .order-btn-cont{
-        margin-top: 48px;
+        margin-top: 200px;
     }
     .order-btn{
         font-size: 40px;
