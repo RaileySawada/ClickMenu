@@ -65,7 +65,7 @@ body{
 }
 .dish-info{
     width: 260px;
-    height: 410px;
+    height: 416px;
     background-image: linear-gradient(to bottom right, #7a66cbea, #574898ea);
     padding: 20px;
     border-radius: 10px;
@@ -88,7 +88,7 @@ body{
     font-size: 20px;
 }
 .price{
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 900;
     margin: 0;
 }
@@ -99,7 +99,7 @@ body{
     padding: 0;
 }
 .info{
-    width: 140px;
+    width: 133px;
     margin-right: 10px;
 }
 .info p{
