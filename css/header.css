@@ -68,31 +68,35 @@ li:hover ul.submenu{
     color: black;
     margin-bottom: 10px;
 }
-@media (max-width: 1048px){
+@media (max-width: 1025px){
     header{
         padding: 0 25px;
     }
+    nav ul li{
+        margin-left: 20px;
+    }
 }
-@media (max-width: 975px){
+@media (max-width: 769px){
     nav ul{
         display: none;
     }
     .hamburger-menu{
         display: block;
         float: right;
+        width: 50px;
     }
-}
-@media (max-width: 376px){
-    nav ul{
-        display: none;
-    }
-    .hamburger-menu{
-        display: block;
-        float: right;
-        width: 30px;
-    }
-    .home-link, .logo-cont{
+    .logo, .logo-cont{
         display: flex;
+        width: 55px;
+        height: 55px;
+    }
+    .home-link{
+        font-size: 23px;
+    }
+}
+@media (max-width: 426px){
+    header{
+        height: 70px;
     }
     .logo, .logo-cont{
         width: 40px;
@@ -101,7 +105,12 @@ li:hover ul.submenu{
     .home-link{
         font-size: 16px;
     }
-    header{
-        height: 70px;
+    .hamburger-menu{
+        width: 30px;
+    }
+}
+@media (max-width: 376px){
+    .home-link, .logo-cont{
+        display: flex;
     }
 }

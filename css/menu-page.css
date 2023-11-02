@@ -11,13 +11,15 @@ body{
     margin-right: 40px;
 }
 .selector-cont{
-    flex: 3;
+    display: flex;
+    flex: 2;
 }
 #selector{
     padding: 10px;
     font-size: 16px;
-    display: flex;
     border-radius: 20px;
+    width: 100px;
+    height: 40px;
 }
 #selector, .search-cont, .search-bar, .search-cont button{
     display: inline-block;
@@ -30,6 +32,7 @@ body{
     flex: 1;
 }
 .search-bar{
+    width: 55px;
     flex: 1;
     height: 36px;
     padding-left: 10px;
@@ -46,16 +49,14 @@ body{
     border-style: solid;
     border-color: rgb(192, 192, 192);
     margin-left: -1px;
-    margin-right: 10px;
     cursor: pointer;
 }
-.search{
+.search-logo{
     width: 20px;
     margin-top: 4px;
 }
 .dish-menu{
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 0 40px 40px 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 30px;
@@ -129,5 +130,8 @@ body{
 @media (max-width: 590px){
     .dish-menu{
         grid-template-columns: 1fr;
+    }
+    .subheader{
+        margin: 0 20px;
     }
 }

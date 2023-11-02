@@ -57,12 +57,17 @@ main{
     font-size: 70px;
     color: white;
 }
-@media (max-width: 910px) {
+@media (max-width: 1025px) {
     .texts{
         text-align: center;
     }
     .order-btn{
         font-size: 50px;
+    }
+}
+@media (max-width: 769px) {
+    .home-pic{
+        margin-left: -350px;
     }
 }
 @media (max-width: 426px) {
@@ -79,11 +84,11 @@ main{
     }
     .text1{
         font-size: 50px;
-        margin-top: 40px;
+        margin-top: 10px;
         margin-bottom: 50px;
     }
     .text2{
-        font-size: 20px;
+        font-size: 30px;
         margin: 20px 0 0 0;
     }
     .order-btn-cont{
