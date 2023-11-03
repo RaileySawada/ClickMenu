@@ -35,10 +35,10 @@ header{
 }
 @keyframes color-change {
     0% { color: #9565a7; }
-    25% { color: blueviolet; }
-    50% { color: #5a476c; }
-    75% { color: #861ad8; }
-    100% { color: rgb(158, 115, 168); }
+    25% { color: #8a2be2; }
+    50% { color: #bc7ff6; }
+    75% { color: #9b5dca; }
+    100% { color: #913fa1; }
 }
 nav{
     flex: 1;
@@ -80,11 +80,12 @@ ul li a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.1s ease;
+    transition: all .1s ease;
 }
 .backdrop-menu li a:hover{
-    color: #956dc0;
+    color: #bf7ce3;
     font-size: 50px;
+    transition: all 0.3s ease;
 }
 .backdrop-menu .submenu{
     display: flex;
