@@ -8,7 +8,9 @@ body{
 .container{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin: 0 40px;
+    margin: 0 40px 40px 40px;
+    row-gap: 40px;
+    column-gap: 40px;
 }
 .reservation-form p, .note{
     color: white;
@@ -21,7 +23,6 @@ body{
     font-family: 'Unbounded', sans-serif;
 }
 .reservation-form, .note{
-    display: inline-block;
     background-color: rgba(64, 4, 107, 0.766);
     border-radius: 20px;
     padding: 10px;
@@ -33,18 +34,19 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .reservation-form{
-    width: 700px;
+    width: 100%;
     justify-self: center;
 }
 .note{
-    width: 250px;
+    width: 80%;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 24px;
+    justify-self: center;
 }
 .input-cont input{
-    width: 650px;
+    width: 90%;
     height: 40px;
     margin-bottom: 20px;
     font-size: 24px;
@@ -77,5 +79,22 @@ body{
     }
     .reservation-form, .note{
         margin: 0;
+    }
+}
+@media(max-width: 769px){
+    .container{
+        margin: 0 20px 40px 20px;
+    }
+}
+@media(max-width: 427px){
+    .container{
+        padding: 20px;
+        margin: 20px;
+    }
+}
+@media(max-width: 321px){
+    .container{
+        padding: 5px;
+        margin: 5px 5px 20px 5px;
     }
 }

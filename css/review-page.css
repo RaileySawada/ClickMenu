@@ -3,10 +3,23 @@ h1{
     color: white;
 }
 body{
-    background-color: #320b50;
+    background-image: linear-gradient(to top, rgb(72, 21, 120), #320b50);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*background-color: #320b50;*/
 }
 main{
     padding: 0 100px 0 100px;
+}
+.review-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 40px;
+}
+.comment-cont{
+    display: flex;
+    justify-content: center;
 }
 .comment-box{
     resize: none;
@@ -20,8 +33,7 @@ main{
     color: rgb(204, 209, 212);
 }
 .user-review, .review-form{
-    width: 360px;
-    height: 330px;
+    flex: 1;
     background-image: linear-gradient(to bottom right, #200238, blueviolet);
     border-radius: 10px;
     margin-bottom: 12px;
@@ -29,6 +41,9 @@ main{
     display: inline-block;
     vertical-align: top;
     box-shadow: -5px 10px 5px 3px black;
+}
+.review-form{
+    justify-self: right;
 }
 .review-form p{
     color: white;
@@ -80,9 +95,12 @@ main{
 .user p{
     margin: 0;
 }
-.review-info{
-    display: flex;
-    justify-content: space-between;
+.review-info, .btn-cont{
+    display: inline-block;
+    vertical-align: top;
+}
+.btn-cont{
+    float: right;
 }
 .question{
     font-family: 'Unbounded', sans-serif;
@@ -136,7 +154,58 @@ main{
 .write-comment-btn:active{
     box-shadow: -1px 3px 5px 1px black;
 }
-.review-section{
-    display: flex;
-    justify-content:space-between;
+@media(max-width: 1130px){
+    main{
+        padding: 0 40px 0 40px;
+    }
+}
+@media(max-width: 1025px){
+    .review-section{
+        grid-template-columns: 1fr 1fr;
+    }
+    .review-info, .btn-cont{
+        display: block;
+    }
+    .review-info{
+        text-align: center;
+    }
+    .btn-cont{
+        float: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .write-comment-btn{
+        margin: 0;
+    }
+    .review-form{
+        justify-self: center;
+    }
+}
+@media(max-width: 769px){
+    .review-section{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width: 426px){
+    main{
+        padding: 0;
+    }
+    .user-review, .review-form{
+        margin: 10px;
+        padding: 20px;
+    }
+    .write-comment-btn{
+        width: 250px;
+    }
+    .pen{
+        width: 20px;
+    }
+    .review-creator{
+        font-size: 15px;
+    }
+    .user-review{
+        padding: 20px;
+    }
 }
