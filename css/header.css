@@ -17,6 +17,7 @@ header{
 }
 .hamburger-menu{
     width: 65px;
+    cursor: pointer;
     display: none;
 }
 .logo-cont{
@@ -28,7 +29,16 @@ header{
     width: 65px;
 }
 .home-link{
+    text-decoration: none;
     margin-left: 20px;
+    animation: color-change 2s ease-in-out infinite;
+}
+@keyframes color-change {
+    0% { color: #9565a7; }
+    25% { color: blueviolet; }
+    50% { color: #5a476c; }
+    75% { color: #861ad8; }
+    100% { color: rgb(158, 115, 168); }
 }
 nav{
     flex: 1;
@@ -42,38 +52,70 @@ nav ul li{
     display: inline-block;
     margin-left: 50px;
 }
-ul li a, .home-link{
+ul li a{
     text-decoration: none;
     color: white;
+    transition: all 0.1s ease;
 }
-.submenu{
-    right: 100px;
-    margin-top: 20px;
-    opacity: 0;
-    position: absolute;
-    top: 45px;
-    visibility: hidden;
-    z-index: 1;
+ul li a:hover{
+    color: #956dc0;
 }
-li:hover ul.submenu{
-    opacity: 1;
-    visibility: visible;
+.backdrop-menu{
+    display: none;
+    position: fixed;
+    right: 0px;
+    top: 100px;
+    width: 400px;
+    background-image: linear-gradient(to top, #2d024d80, #2d024d);
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 5px 3px #000000a5;
 }
-.submenu li{
-    float: none;
-    width: 100%;
-    margin-bottom: 5px;
+.backdrop-menu ul{
+    padding: 0;
 }
-.submenu li a{
-    color: black;
-    margin-bottom: 10px;
+.backdrop-menu li{
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease;
 }
-@media (max-width: 1025px){
+.backdrop-menu li a:hover{
+    color: #956dc0;
+    font-size: 50px;
+}
+.backdrop-menu .submenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 1200px){
     header{
         padding: 0 25px;
     }
     nav ul li{
         margin-left: 20px;
+    }
+}
+@media (max-width: 1075px){
+    .hamburger-menu, nav ul{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .hamburger-menu{
+        margin-left: 20px;
+        width: 50px;
+    }
+    .submenu{
+        display: none;
+    }
+    .backdrop-menu.active{
+        display: block;
+    }
+    .backdrop-menu .link{
+        display: none;
     }
 }
 @media (max-width: 769px){
@@ -83,7 +125,6 @@ li:hover ul.submenu{
     .hamburger-menu{
         display: block;
         float: right;
-        width: 50px;
     }
     .logo, .logo-cont{
         display: flex;
@@ -92,6 +133,14 @@ li:hover ul.submenu{
     }
     .home-link{
         font-size: 23px;
+    }
+    .backdrop-menu{
+        width: 100%;
+        border-radius: 0;
+        top: 100px;
+    }
+    .backdrop-menu .link{
+        display: flex;
     }
 }
 @media (max-width: 426px){
@@ -107,6 +156,9 @@ li:hover ul.submenu{
     }
     .hamburger-menu{
         width: 30px;
+    }
+    .backdrop-menu{
+        top: 71px;
     }
 }
 @media (max-width: 376px){
