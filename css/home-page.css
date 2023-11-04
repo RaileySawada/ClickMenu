@@ -70,7 +70,7 @@ main{
         margin-left: -350px;
     }
 }
-@media (max-width: 426px) {
+@media (max-width: 492px) {
     .home-pic{
         display: none;
     }

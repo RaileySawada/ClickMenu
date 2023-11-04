@@ -154,7 +154,7 @@ main{
 .write-comment-btn:active{
     box-shadow: -1px 3px 5px 1px black;
 }
-@media(max-width: 1130px){
+@media(max-width: 1136px){
     main{
         padding: 0 40px 0 40px;
     }
