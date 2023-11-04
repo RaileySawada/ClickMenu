@@ -33,7 +33,7 @@ body{
     flex: 1;
 }
 .search-bar{
-    width: 55px;
+    width: 140px;
     flex: 1;
     height: 36px;
     padding-left: 10px;
@@ -141,5 +141,10 @@ body{
     }
     .search-cont{
         margin: 0 18px 30px 0;
+    }
+}
+@media(max-width: 375px){
+    .search-bar{
+        width: 80px;
     }
 }
