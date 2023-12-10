@@ -127,7 +127,7 @@ body{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-@media (max-width: 810px){
+@media (max-width: 912px){
     .dish-menu{
         grid-template-columns: 1fr 1fr;
     }

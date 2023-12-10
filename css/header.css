@@ -3,42 +3,43 @@ header{
     top: 0;
     right: 0;
     left: 0;
-    background-color: #2d024d;
-    height: 100px;
+    background-color: #fcffe7;
+    height: 60px;
     display: flex;
     align-items: center;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
-    font-size: 26px;
-    color: white;
-    box-shadow: 2px 0 5px 3px rgb(0, 0, 0);
+    font-size: 20px;
+    box-shadow: 2px 0 5px 3px #000;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 20px;
+    z-index: 999;
 }
 .hamburger-menu{
-    width: 65px;
+    width: 55px;
     cursor: pointer;
     display: none;
 }
 .logo-cont{
     margin: 0;
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
 }
 .logo{
-    width: 65px;
+    width: 50px;
+    cursor: pointer;
 }
 .home-link{
     text-decoration: none;
     margin-left: 20px;
-    animation: color-change 2s ease-in-out infinite;
+    animation: color-changer 2s ease-in-out infinite;
 }
-@keyframes color-change {
-    0% { color: #9565a7; }
-    25% { color: #8a2be2; }
-    50% { color: #bc7ff6; }
-    75% { color: #9b5dca; }
-    100% { color: #913fa1; }
+@keyframes color-changer {
+    0% { color: #e05c04; }
+    25% { color: #dea057; }
+    50% { color: #f4972d; }
+    75% { color: #b46204; }
+    100% { color: #8f612c; }
 }
 nav{
     flex: 1;
@@ -50,15 +51,15 @@ nav ul{
 nav ul li{
     list-style: none;
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 ul li a{
     text-decoration: none;
-    color: white;
+    color: #c55a11;
     transition: all 0.1s ease;
 }
 ul li a:hover{
-    color: #956dc0;
+    color: #ca6d30;
 }
 .backdrop-menu{
     display: none;

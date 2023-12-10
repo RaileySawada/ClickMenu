@@ -40,7 +40,7 @@ main{
     padding: 40px;
     display: inline-block;
     vertical-align: top;
-    box-shadow: -5px 10px 5px 3px black;
+    box-shadow: -5px 10px 5px 3px #111111a1;
 }
 .review-form{
     justify-self: right;

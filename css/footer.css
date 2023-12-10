@@ -1,0 +1,85 @@
+footer{
+    background-color: #dea057;
+    padding: 0 0 20px 0;
+}
+.footer-cont{
+    display: grid;
+    margin: 0 40px 0px 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+.contact, .opening-hours, .menu, .address{
+    display: inline-block;
+}
+.contact{
+    margin-top: 30px;
+}
+.link, .link-img{
+    width: 60px;
+    margin-top: 20px;
+    margin-right: 7px;
+}
+.top-text{
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.footer-cont hr{
+    margin: 0 0 10px 0;
+}
+.day, .time{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.day p, .time p{
+    margin: 0 0 7px 0;
+}
+.time{
+    margin-left: 20px;
+}
+.menus p, .add p{
+    font-family: sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+@media(max-width: 1260px){
+    .footer-cont{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 925px){
+    .footer-cont{
+        grid-template-columns: 1fr 1fr;
+    }
+    .link, .link-img{
+        width: 50px;
+    }
+}
+@media (max-width: 660px){
+    .footer-cont{
+        grid-template-columns: 1fr;
+        margin-left: 100px;
+    }
+    .top-text{
+        font-size: 20px;
+    }
+    .footer-cont hr{
+        width: 260px;
+    }
+    .add p, .menus p, .time, .day{
+        font-size: 16px;
+    }
+}
+@media (max-width: 426px){
+    .footer-cont{
+        margin: 20px 30px;
+    }
+    .link, .link-img{
+        width: 48px;
+    }
+}
