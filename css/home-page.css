@@ -9,6 +9,7 @@ body{
     justify-content: space-between;
     vertical-align: top;
     display: flex;
+    margin-top: 120px;
 }
 .home-bg{
     z-index: 0;
