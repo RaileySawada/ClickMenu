@@ -1,103 +1,116 @@
 body{
-    background-image: url("../images/backgrounds/homebackground.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #fcffe7;
 }
-.container{
+.top-section p{
+    display: inline-block;
+    font-family: sans-serif;
+}
+.product{
+    margin-right: 294px;
+    margin-left: 80px;
+}
+.price{
+    margin-right: 110px;
+}
+.quantity{
+    margin-right: 90px;
+}
+.total{
+    margin-right: 70px;
+}
+.orders{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin: 0 40px 20px 40px;
-    row-gap: 40px;
-    column-gap: 40px;
+    grid-template-columns: 100%;
+    margin-bottom: 140px;
 }
-.reservation-form p, .note{
-    color: white;
-}
-.menu-reservation{
-    font-size: 30px;
-    font-weight: 900;
-}
-.reservation-form p{
-    font-family: 'Unbounded', sans-serif;
-}
-.reservation-form, .note{
-    background-color: rgba(64, 4, 107, 0.766);
-    border-radius: 20px;
-    padding: 20px;
-    vertical-align: top;
-    text-align: center;
-    box-shadow: inset -1px 2px 5px 3px black;
-}
-.reservation-form::placeholder, .reservation-form input, .reservation-form button{
-    font-family: 'Montserrat', sans-serif;
-}
-.reservation-form{
-    width: 100%;
+.order, .top-section{
+    width: 1000px;
+    margin: 10px 40px;
+    background-color: white;
+    border: 2px solid #dea057;
+    box-shadow: 0px 5px 3px gray;
     justify-self: center;
 }
-.note{
-    width: 80%;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+.order *{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 12px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.order-pic img{
+    width: 90px;
+    margin: 10px 0 10px -20px;
+}
+.order-name{
+    width: 210px;
+    margin-left: -10px;
     font-weight: 700;
-    font-size: 24px;
-    justify-self: center;
 }
-.input-cont input{
-    width: 90%;
-    height: 36px;
-    margin-bottom: 20px;
-    font-size: 24px;
+.order-quantity p{
+    background-color: #b3b3b3;
+    border: 1px solid #4d4d4d;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    margin: 0;
 }
-.input-cont button{
-    font-size: 20px;
-    font-weight: 900;
-    padding: 10px 30px;
+.order-quantity button{
+    width: 30px;
+    height: 22px;
+    background-color: #939393;
+    border-radius: 0;
+    border: 1px solid #4d4d4d;
     cursor: pointer;
-    border-radius: 10px;
+}
+.order-quantity .minus{
+    margin-right: -7px;
+}
+.order-quantity .plus{
+    margin-left: -7px;
+}
+.order-totalPrice, .order-price{
+    margin: 12px 40px;
+}
+.order-action p{
+    color: red;
+    cursor: pointer;
+}
+.checkout{
+    position: fixed;
+    bottom: 0;
+    width: 1000px;
+    justify-self: center;
+    background-color: white;
+    border: 2px solid #dea057;
+    padding: 10px;
+    font-family: sans-serif;
+}
+.checkout *{
+    display: inline-block;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 12px;
+}
+.selectAll-txt{
+    margin-left: -20px;
+    width: 64%;
+}
+.totalPrice-txt{
+    margin-left: -32px;
+    width: 70px;
+    color: #e05c04;
+}
+.checkout-btn{
+    background-color: #e05c04;
     border: none;
-    background-image: linear-gradient(to top right, #5c0864c3, #4103519c, #7e2ea7af);
-    box-shadow: 0 2px 5px 2px black;
-    transition: all 0.1s ease;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: -1px 4px 4px #b1b1b1;
+    color: white;
+    cursor: pointer;
 }
-.input-cont button:hover{
-    padding: 10px 38px;
-    background-image: linear-gradient(to top right, #7e2ea7af, #4103519c, #5c0864c3);
-    box-shadow: 0 3px 6px 4px black;
-}
-.input-cont button:active{
-    box-shadow: 0 2px 5px 2px #4d4d4d;
-}
-@media (max-width: 1024px){
-    .container{
-        grid-template-columns: 1fr;
-    }
-    .note{
-        justify-self: center;
-    }
-    .reservation-form, .note{
-        margin: 0;
-    }
-}
-@media(max-width: 769px){
-    .container{
-        margin: 0 20px 40px 20px;
-    }
-    .reservation-form, .note{
-        padding: 10px;
-    }
-}
-@media(max-width: 427px){
-    .container{
-        padding: 20px;
-        margin: 20px;
-    }
-}
-@media(max-width: 321px){
-    .container{
-        padding: 5px;
-        margin: 5px 5px 20px 5px;
-    }
+.checkout-btn:active{
+    background-color: #e67d06;
+    box-shadow: none;
 }
