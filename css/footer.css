@@ -15,7 +15,7 @@ footer{
 .contact{
     margin-top: 30px;
 }
-.link, .link-img{
+.socmed-link, .link-img{
     width: 60px;
     margin-top: 20px;
     margin-right: 7px;
@@ -47,6 +47,11 @@ footer{
     letter-spacing: 1px;
     margin: 0 0 7px 0;
 }
+@media(min-width: 1990px){
+    .footer-cont{
+        margin-top: 200px;
+    }
+}
 @media(max-width: 1260px){
     .footer-cont{
         grid-template-columns: 1fr 1fr 1fr;
@@ -56,7 +61,7 @@ footer{
     .footer-cont{
         grid-template-columns: 1fr 1fr;
     }
-    .link, .link-img{
+    .socmed-link, .link-img{
         width: 50px;
     }
 }
@@ -79,7 +84,7 @@ footer{
     .footer-cont{
         margin: 20px 30px;
     }
-    .link, .link-img{
+    .socmed-link, .link-img{
         width: 48px;
     }
 }

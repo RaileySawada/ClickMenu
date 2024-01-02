@@ -243,6 +243,9 @@ body{
     .mission-txt-cont{
         margin-top: 190px;
     }
+    .side-img{
+        margin-top: 30px;
+    }
 }
 @media (max-width: 700px){
     .side-img{
@@ -254,6 +257,9 @@ body{
     .mission-txt{
         font-size: 16;
         margin: 0 30px;
+    }
+    .mission-txt-cont{
+        margin-top: 230px;
     }
 }
 @media (max-width: 523px){
@@ -296,7 +302,7 @@ body{
         margin-bottom: 40px;
     }
     .mission-txt-cont{
-        margin-top: 150px;
+        margin-top: 170px;
     }
 }
 @media (max-width: 382px){

@@ -1,3 +1,9 @@
+html{
+    cursor: url('../images/cursor/cursor.png'), auto;
+}
+a{
+    cursor: url('../images/cursor/pointer.png'), auto;
+}
 body{
     margin: 0;
     padding: 0;

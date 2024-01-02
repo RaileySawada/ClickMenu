@@ -27,7 +27,8 @@ header{
 }
 .logo{
     width: 50px;
-    cursor: pointer;
+    /*cursor: pointer;*/
+    cursor: url('../images/cursor/pointer.png'), auto;
 }
 .home-link{
     text-decoration: none;
@@ -65,10 +66,10 @@ ul li a:hover{
     display: none;
     position: fixed;
     right: 0px;
-    top: 100px;
+    top: 60px;
     width: 400px;
-    background-image: linear-gradient(to top, #2d024d80, #2d024d);
-    backdrop-filter: blur(10px);
+    background-image: linear-gradient(to bottom, #fcffe7, #fcffe755);
+    backdrop-filter: blur(5px);
     border-bottom-left-radius: 10px;
     box-shadow: 0 5px 3px #000000a5;
 }
@@ -84,7 +85,7 @@ ul li a:hover{
     transition: all .1s ease;
 }
 .backdrop-menu li a:hover{
-    color: #bf7ce3;
+    color: #9f6945;
     font-size: 50px;
     transition: all 0.3s ease;
 }
@@ -139,7 +140,7 @@ ul li a:hover{
     .backdrop-menu{
         width: 100%;
         border-radius: 0;
-        top: 100px;
+        top: 60px;
     }
     .backdrop-menu .link{
         display: flex;
