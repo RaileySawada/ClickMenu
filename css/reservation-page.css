@@ -232,7 +232,7 @@ body{
         margin: 0;
     }
     .order-name, .order-name p{
-        font-size: 14px;
+        font-size: 16px;
         margin-left: 3px;
     }
     .checkbox, .checkbox input{
@@ -240,7 +240,7 @@ body{
     }
     .qty{
         width: 30px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .order-quantity button{
         width: 20px;
@@ -300,15 +300,13 @@ body{
 }   
 @media(max-width: 466px){
     .order{
-        width: 101%;
-        border-radius: 0;
+        width: 91%;
     }
     .checkout{
-        width: 101%;
-        border-radius: 0;
+        width: 92%;
     }
     .checkout p{
-        font-size: 14px;
+        font-size: 16px;
     }
     .selector, .selector input{
         margin-left: 8px;
@@ -316,6 +314,12 @@ body{
     }
     .checkout-btn-div, .checkout-btn{
         margin-left: 0;
+    }
+    .order-name{
+        right: 8px;
+    }
+    .right-section{
+        right: 44px;
     }
 }
 @media(max-width: 376px){
@@ -326,18 +330,18 @@ body{
     .selectAll-txt, .selectAll-txt p{
         width: 62px;
     }
-    .order-name{
-        right: 32px;
-    }
-    .right-section{
-        right: 50px;
-    }
 }
 @media(max-width: 321px){
     .order-name{
-        right: 12px;
+        right: -4px;
     }
     .right-section{
         right: 30px;
+    }
+    .selectAll-txt p{
+        width: 70px;
+    }
+    .total-txt{
+        margin-left: 20px;
     }
 }
