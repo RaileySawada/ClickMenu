@@ -22,9 +22,9 @@ header{
 }
 .bar{
     display: block;
-    width: 40px;
-    height: 7px;
-    margin: 5px auto;
+    width: 33px;
+    height: 5px;
+    margin: 4px auto;
     border-radius: 5px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -120,10 +120,10 @@ ul li a:hover{
         opacity: 0;
     }
     .hamburger-menu.active .bar:nth-child(1){
-        transform: translateY(12px) rotate(45deg);
+        transform: translateY(9px) rotate(45deg);
     }
     .hamburger-menu.active .bar:nth-child(3){
-        transform: translateY(-12px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
     }
     .submenu{
         display: none;
