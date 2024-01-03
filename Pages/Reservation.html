@@ -36,30 +36,6 @@
             </div>
         </header>
         <main>
-            <!--<div class="container">
-                <form class="reservation-form" action="">
-                    <div>
-                        <p class="menu-reservation">MENU RESERVATION</p>
-                    </div>
-                    <div class="input-cont">
-                        <input type="text" placeholder="Name"><br>
-                        <input type="text" placeholder="Dish"><br>
-                        <input type="date" placeholder="Date"><br>
-                        <input type="time" placeholder="Time"><br>
-                        <input type="text" placeholder="Quantity"><br>
-                        <input type="text" placeholder="Mode of Payment"><br>
-                        <button>Submit</button>
-                    </div>
-                </form>
-                <div class="note">
-                    <p>NOTE:</p>
-                    <p>
-                        Please answer this with accurate and correct information, to facilitate the preparation
-                        of your orders. Kindly screenshot this for confirmation and show it to us for claiming
-                        your order.
-                    </p>
-                </div>
-            </div>-->
             <div class="orders">
                 <div class="top-section">
                     <p class="product">Product</p>
@@ -69,132 +45,152 @@
                     <p class="action">Action</p>
                 </div>
                 <div class="order">
-                    <div class="checkbox">
-                        <input class="check" type="checkbox">
+                    <div class="left-section">
+                        <div class="checkbox">
+                            <input class="check" type="checkbox">
+                        </div>
+                        <div class="order-pic">
+                            <img src="../images/dishes/beef-steak.png" alt="Beef Steak Photo">
+                        </div>
+                        <div class="order-name">
+                            <p>Beef Steak</p>
+                        </div>
                     </div>
-                    <div class="order-pic">
-                        <img src="../images/dishes/beef-steak.png" alt="Beef Steak Photo">
-                    </div>
-                    <div class="order-name">
-                        <p>Beef Steak</p>
-                    </div>
-                    <div class="order-price">
-                        <p>₱ 250</p>
-                    </div>
-                    <div class="order-quantity">
-                        <button class="minus">-</button>
-                        <p>1</p>
-                        <button class="plus">+</button>
-                    </div>
-                    <div class="order-totalPrice">
-                        <p>₱ 250</p>
-                    </div>
-                    <div class="order-action">
-                        <p>Delete</p>
-                    </div>
-                </div>
-
-                <div class="order">
-                    <div class="checkbox">
-                        <input class="check" type="checkbox">
-                    </div>
-                    <div class="order-pic">
-                        <img src="../images/dishes/beef-bulalo.png" alt="Beef Bulalo Photo">
-                    </div>
-                    <div class="order-name">
-                        <p>Beef Bulalo</p>
-                    </div>
-                    <div class="order-price">
-                        <p>₱ 300</p>
-                    </div>
-                    <div class="order-quantity">
-                        <button class="minus">-</button>
-                        <p>2</p>
-                        <button class="plus">+</button>
-                    </div>
-                    <div class="order-totalPrice">
-                        <p>₱ 600</p>
-                    </div>
-                    <div class="order-action">
-                        <p>Delete</p>
+                    <div class="right-section">
+                        <div class="order-price">
+                            <p>₱ 250</p>
+                        </div>
+                        <div class="order-quantity">
+                            <button class="minus">-</button>
+                            <input class="qty" type="number" value="1" min="1" max="10">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="order-totalPrice">
+                            <p>₱ 250</p>
+                        </div>
+                        <div class="order-action">
+                            <p>Delete</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="order">
-                    <div class="checkbox">
-                        <input class="check" type="checkbox">
+                    <div class="left-section">
+                        <div class="checkbox">
+                            <input class="check" type="checkbox">
+                        </div>
+                        <div class="order-pic">
+                            <img src="../images/dishes/beef-bulalo.png" alt="Beef Bulalo Photo">
+                        </div>
+                        <div class="order-name">
+                            <p>Beef Bulalo</p>
+                        </div>
                     </div>
-                    <div class="order-pic">
-                        <img src="../images/dishes/sisig.png" alt="Sisig Photo">
-                    </div>
-                    <div class="order-name">
-                        <p>Sisig</p>
-                    </div>
-                    <div class="order-price">
-                        <p>₱ 150</p>
-                    </div>
-                    <div class="order-quantity">
-                        <button class="minus">-</button>
-                        <p>1</p>
-                        <button class="plus">+</button>
-                    </div>
-                    <div class="order-totalPrice">
-                        <p>₱ 150</p>
-                    </div>
-                    <div class="order-action">
-                        <p>Delete</p>
-                    </div>
-                </div>
-
-                <div class="order">
-                    <div class="checkbox">
-                        <input class="check" type="checkbox">
-                    </div>
-                    <div class="order-pic">
-                        <img src="../images/dishes/pork-karekare.png" alt="Pork Kare-kare Photo">
-                    </div>
-                    <div class="order-name">
-                        <p>Pork Kare-kare</p>
-                    </div>
-                    <div class="order-price">
-                        <p>₱ 300</p>
-                    </div>
-                    <div class="order-quantity">
-                        <button class="minus">-</button>
-                        <p>1</p>
-                        <button class="plus">+</button>
-                    </div>
-                    <div class="order-totalPrice">
-                        <p>₱ 300</p>
-                    </div>
-                    <div class="order-action">
-                        <p>Delete</p>
+                    <div class="right-section">
+                        <div class="order-price">
+                            <p>₱ 300</p>
+                        </div>
+                        <div class="order-quantity">
+                            <button class="minus">-</button>
+                            <input class="qty" type="number" value="2" min="1" max="10">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="order-totalPrice">
+                            <p>₱ 600</p>
+                        </div>
+                        <div class="order-action">
+                            <p>Delete</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="order">
-                    <div class="checkbox">
-                        <input class="check" type="checkbox">
+                    <div class="left-section">
+                        <div class="checkbox">
+                            <input class="check" type="checkbox">
+                        </div>
+                        <div class="order-pic">
+                            <img src="../images/dishes/sisig.png" alt="Sisig Photo">
+                        </div>
+                        <div class="order-name">
+                            <p>Sisig</p>
+                        </div>
                     </div>
-                    <div class="order-pic">
-                        <img src="../images/dishes/menudo.png" alt="Menudo Photo">
+                    <div class="right-section">
+                        <div class="order-price">
+                            <p>₱ 150</p>
+                        </div>
+                        <div class="order-quantity">
+                            <button class="minus">-</button>
+                            <input class="qty" type="number" value="1" min="1" max="10">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="order-totalPrice">
+                            <p>₱ 150</p>
+                        </div>
+                        <div class="order-action">
+                            <p>Delete</p>
+                        </div>
                     </div>
-                    <div class="order-name">
-                        <p>Menudo</p>
+                </div>
+
+                <div class="order">
+                    <div class="left-section">
+                        <div class="checkbox">
+                            <input class="check" type="checkbox">
+                        </div>
+                        <div class="order-pic">
+                            <img src="../images/dishes/pork-karekare.png" alt="Pork Kare-kare Photo">
+                        </div>
+                        <div class="order-name">
+                            <p>Pork Kare-kare</p>
+                        </div>
                     </div>
-                    <div class="order-price">
-                        <p>₱ 200</p>
+                    <div class="right-section">
+                        <div class="order-price">
+                            <p>₱ 300</p>
+                        </div>
+                        <div class="order-quantity">
+                            <button class="minus">-</button>
+                            <input class="qty" type="number" value="1" min="1" max="10">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="order-totalPrice">
+                            <p>₱ 300</p>
+                        </div>
+                        <div class="order-action">
+                            <p>Delete</p>
+                        </div>
                     </div>
-                    <div class="order-quantity">
-                        <button class="minus">-</button>
-                        <p>1</p>
-                        <button class="plus">+</button>
+                </div>
+
+                <div class="order">
+                    <div class="left-section">
+                        <div class="checkbox">
+                            <input class="check" type="checkbox">
+                        </div>
+                        <div class="order-pic">
+                            <img src="../images/dishes/menudo.png" alt="Menudo Photo">
+                        </div>
+                        <div class="order-name">
+                            <p>Menudo</p>
+                        </div>
                     </div>
-                    <div class="order-totalPrice">
-                        <p>₱ 200</p>
-                    </div>
-                    <div class="order-action">
-                        <p>Delete</p>
+                    <div class="right-section">
+                        <div class="order-price">
+                            <p>₱ 200</p>
+                        </div>
+                        <div class="order-quantity">
+                            <button class="minus">-</button>
+                            <input class="qty" type="number" value="1" min="1" max="10">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="order-totalPrice">
+                            <p>₱ 200</p>
+                        </div>
+                        <div class="order-action">
+                            <p>Delete</p>
+                        </div>
                     </div>
                 </div>
 
@@ -211,7 +207,7 @@
                     <div class="totalPrice-txt">
                         <p>₱ 0</p>
                     </div>
-                    <div>
+                    <div class="checkout-btn-div">
                         <button class="checkout-btn">Checkout</button>
                     </div>
                 </div>

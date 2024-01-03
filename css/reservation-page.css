@@ -30,6 +30,7 @@ body{
     border: 2px solid #dea057;
     box-shadow: 0px 5px 3px gray;
     justify-self: center;
+    border-radius: 10px;
 }
 .order *{
     display: inline-block;
@@ -37,6 +38,9 @@ body{
     margin: 12px;
     font-family: sans-serif;
     font-size: 18px;
+}
+.right-section, .left-section{
+    margin: 0;
 }
 .order-pic img{
     width: 90px;
@@ -47,13 +51,14 @@ body{
     margin-left: -10px;
     font-weight: 700;
 }
-.order-quantity p{
+.qty{
     background-color: #b3b3b3;
     border: 1px solid #4d4d4d;
-    width: 50px;
-    height: 20px;
+    width: 40px;
+    height: 18px;
     text-align: center;
     margin: 0;
+    outline: none;
 }
 .order-quantity button{
     width: 30px;
@@ -79,12 +84,13 @@ body{
 .checkout{
     position: fixed;
     bottom: 0;
-    width: 1000px;
+    width: 996px;
     justify-self: center;
     background-color: white;
     border: 2px solid #dea057;
     padding: 10px;
     font-family: sans-serif;
+    border-radius: 20px 20px 0 0;
 }
 .checkout *{
     display: inline-block;
@@ -94,11 +100,12 @@ body{
 }
 .selectAll-txt{
     margin-left: -20px;
-    width: 64%;
+    width: 62%;
 }
 .totalPrice-txt{
     margin-left: -32px;
-    width: 70px;
+    margin-right: 0;
+    width: 100px;
     color: #e05c04;
 }
 .checkout-btn{
@@ -113,4 +120,224 @@ body{
 .checkout-btn:active{
     background-color: #e67d06;
     box-shadow: none;
+}
+@media(max-width: 1024px){
+    .order, .top-section{
+        margin: 5px 0;
+        width: 90%;
+    }
+    .product{
+        margin-right: 294px;
+        margin-left: 60px;
+    }
+    .price{
+        margin-right: 74px;
+    }
+    .quantity{
+        margin-right: 64px;
+    }
+    .total{
+        margin-right: 60px;
+    }
+    .order *{
+        margin: 10px;
+    }
+    .order-totalPrice{
+        margin-right: 46px;
+    }
+    .checkout{
+        width: 91%;
+    }
+    .selectAll-txt{
+        width: 50%;
+    }
+    .totalPrice-txt{
+        width: 100px;
+        margin-right: 0;
+    }
+    .right-section, .left-section{
+        margin: 0;
+    }
+    .order-quantity *{
+        margin: 0;
+    }
+    .order-quantity input{
+        height: 19px;
+    }
+}
+@media(max-width: 970px){
+    .top-section{
+        display: none;
+    }
+    .order-name{
+        width: 150px;
+    }
+    .order-totalPrice, .order-totalPrice p{
+        margin-right: 10px;
+    }
+    .order-action{
+        display: none;
+    }
+    .selectAll-txt{
+        width: 55%;
+    }
+    .totalPrice-txt{
+        margin-left: -32px;
+        width: 70px;
+        color: #e05c04;
+    }
+    .total-txt{
+        margin-left: 0;
+    }
+    .totalPrice-txt{
+        margin-right: 0;
+    }
+    .totalPrice-txt p{
+        margin: 0 0 0 10px;
+    }
+    .checkout-btn{
+        margin: 0;
+    }
+    .order-quantity input{
+        height: 18px;
+    }
+}
+@media(max-width: 768px){
+    .order-price, .order-quantity, .order-totalPrice{
+        display: block;
+    }
+    .right-section{
+        width: 30%;
+        justify-content: right;
+        text-align: right;
+    }
+    .order{
+        width: 82%;
+    }
+    .checkout{
+        width: 83%;
+        padding: 5px;
+    }
+    .selectAll-txt{
+        width: 40%;
+        margin-right: 0;
+    }
+    .checkout-btn-div, .checkout-btn{
+        margin-right: 0;
+    }
+}
+@media(max-width: 580px){
+    .order-pic, .order-pic img{
+        width: 90px;
+        margin: 0;
+    }
+    .order-name, .order-name p{
+        font-size: 14px;
+        margin-left: 3px;
+    }
+    .checkbox, .checkbox input{
+        margin-right: 2px;
+    }
+    .qty{
+        width: 30px;
+        font-size: 14px;
+    }
+    .order-quantity button{
+        width: 20px;
+        padding: 1px;
+    }
+    .order-price p, .order-totalPrice p{
+        font-size: 16px;
+    }
+    .selector, .selector input{
+        margin-left: 8px;
+        margin-right: 2px;
+    }
+    .checkout{
+        text-align: center;
+    }
+    .selectAll-txt, .selectAll-txt p{
+        text-align: left;
+        width: 120px;
+        margin-left: 0;
+    }
+    .totalPrice-txt{
+        text-align: left;
+    }
+    .checkout p{
+        font-size: 14px;
+    }
+}
+@media(max-width: 530px){
+    .order-price{
+        display: none;
+    }
+    .order-name{
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 20px;
+        width: 140px;
+        right: 44px;
+    }
+    .order-name p, .order-totalPrice p, .qty{
+        font-size: 16px;
+    }
+    .order-pic, .order-pic img{
+        margin: 4px 0;
+        width: 90px;
+    }
+    .right-section{
+        width: 120px;
+        position: absolute;
+        margin-top: 30px;
+        text-align: left;
+        right: 80px;
+    }
+    .order-totalPrice, .order-totalPrice p{
+        margin-left: 5px;
+        margin-top: 0;
+    }
+}   
+@media(max-width: 466px){
+    .order{
+        width: 101%;
+        border-radius: 0;
+    }
+    .checkout{
+        width: 101%;
+        border-radius: 0;
+    }
+    .checkout p{
+        font-size: 14px;
+    }
+    .selector, .selector input{
+        margin-left: 8px;
+        margin-right: 2px;
+    }
+    .checkout-btn-div, .checkout-btn{
+        margin-left: 0;
+    }
+}
+@media(max-width: 376px){
+    .selector, .selector input{
+        margin-left: 2px;
+        margin-right: 1px;
+    }
+    .selectAll-txt, .selectAll-txt p{
+        width: 62px;
+    }
+    .order-name{
+        right: 32px;
+    }
+    .right-section{
+        right: 50px;
+    }
+}
+@media(max-width: 321px){
+    .order-name{
+        right: 12px;
+    }
+    .right-section{
+        right: 30px;
+    }
 }
