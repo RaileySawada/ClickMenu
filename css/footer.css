@@ -82,7 +82,7 @@ footer{
 }
 @media (max-width: 426px){
     .footer-cont{
-        margin: 20px 30px;
+        margin: 0 30px 20px 30px;
     }
     .socmed-link, .link-img{
         width: 48px;
