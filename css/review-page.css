@@ -278,9 +278,6 @@ textarea{
     textarea{
         width: 360px;
     }
-    .footer-cont{
-        margin-top: 0;
-    }
 }
 @media(max-width: 380px){
     textarea{
