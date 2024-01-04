@@ -47,6 +47,11 @@ footer{
     letter-spacing: 1px;
     margin: 0 0 7px 0;
 }
+.menus a{
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
 @media(min-width: 1990px){
     .footer-cont{
         margin-top: 200px;
