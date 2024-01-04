@@ -14,14 +14,28 @@ body{
     background-color: white;
 }
 main{
-    padding: 0 100px 0 100px;
-    display: flex;
+    display: grid;
 }
-.review-section{
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
     background-color: #fcffe7;
-    width: 1800px;
-    height: 1800px;
+    width: 1000px;
     box-shadow: 0 0 4px #00000057;
+    justify-self: center;
+}
+.user-review{
+    width: 940px;
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid #dea057;
+    border-radius: 30px;
+    box-shadow: 0px 3px 3px #0000005a;
+    justify-self: center;
+}
+.myreview{
+    display: flex;
 }
 .user-profile{
     width: 60px;
@@ -29,4 +43,249 @@ main{
     object-fit: cover;
     object-position: center;
     border-radius: 50px;
+}
+.user-profile-cont, .user-profile{
+    margin: 10px 0 5px 20px;
+}
+.user-profile-cont, .user-profile, .user, .rate{
+    display: inline-block;
+    vertical-align: middle;
+}
+.username{
+    margin: 20px 0 0 10px;
+    font-weight: 500;
+}
+.order{
+    margin: 2px 0 10px 10px;
+}
+.rate{
+    margin-top: 20px;
+    margin-right: 60px;
+    flex: 3;
+    text-align: right;
+}
+.rate div{
+    display: inline-block;
+}
+.seller-service{
+    margin-left: 20px;
+}
+.rate p{
+    margin-bottom: 0;
+    text-align: center;
+}
+.star{
+    width: 100px;
+}
+.textarea-cont{
+    margin-bottom: 8px;
+    text-align: center;
+    padding: 0;
+}
+textarea{
+    resize: none;
+    width: 890px;
+    height: 100px;
+    border-radius: 20px;
+    padding: 10px;
+    outline: 2px solid #dea057;
+    background-color: #fcffe7;
+}
+.button-cont{
+    display: flex;
+    margin-bottom: 20px;
+}
+.buttons{
+    flex: 1;
+    text-align: right;
+    margin-right: 60px;
+}
+.button-cont button{
+    margin-left: 10px;
+}
+.cancel-btn{
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    text-decoration: underline;
+    transition: all 0,1s ease-in-out;
+}
+.cancel-btn:hover{
+    color: red;
+}
+.submit-btn{
+    border: 2px solid #c07015;
+    border-radius: 10px;
+    background-color: #dea057;
+    box-shadow: 0 3px 3px gray;
+    transition: all 0.1s ease-in-out;
+}
+.submit-btn:hover{
+    color: #ff8800;
+    box-shadow: 0 2px 2px #00000047;
+}
+.submit-btn:active{
+    background-color: #fcffe7;
+    color: #dea057;
+    box-shadow: none;
+}
+.users-review{
+    display: grid;
+    justify-items: center;
+    margin-bottom: 20px;
+    row-gap: 10px;
+}
+.customer-review{
+    width: 860px;
+    background-color: white;
+    border: 2px solid #dea057;
+    border-radius: 10px;
+    box-shadow: 0 4px 3px 1px #0000003a;
+}
+.c-review{
+    display: flex;
+}
+.customer-profile, .customer-profile-cont{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+    margin: 10px 0 5px 10px;
+}
+.customer-profile{
+    margin: 10px 0 0 0;
+}
+.customer-profile-cont, .user-profile, .customer, .rate{
+    display: inline-block;
+    vertical-align: middle;
+}
+.customer-name{
+    font-weight: 500;
+    margin: 20px 0 0 10px;
+}
+.customer-order{
+    margin: 2px 0 10px 10px;
+}
+.review-txt-cont{
+    margin-left: 16px;
+    border: 1px solid #c07015;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.review{
+    margin: 10px 0;
+}
+@media(max-width: 1024px){
+    .main-container{
+        width: 100%;
+    }
+}
+@media(max-width: 970px){
+    .user-review{
+        width: 740px;
+    }
+    textarea{
+        width: 700px;
+    }
+    .customer-review{
+        width: 660px;
+    }
+}
+@media(max-width: 768px){
+    .user-review{
+        width: 640px;
+    }
+    textarea{
+        width: 510px;
+    }
+    .customer-review{
+        width: 560px;
+    }
+    .customer-review .rate{
+        margin-right: 0;
+    }
+}
+@media(max-width: 662px){
+    .user-review{
+        width: 540px;
+    }
+    textarea{
+        width: 460px;
+    }
+    .customer-review{
+        width: 460px;
+    }
+    .dish-quality p, .seller-service p{
+        font-size: 14px;
+    }
+    .star{
+        width: 80px;
+    }
+    .rate{
+        margin-right: 40px;
+    }
+    .customer-review .rate{
+        margin-right: -16px;
+    }
+}
+@media(max-width: 562px){
+    .customer-review{
+        width: 96%;
+        border-radius: 0
+    }
+    .user-review{
+        width: 94%;
+    }
+    textarea{
+        width: 410px;
+    }
+    .user-profile{
+        margin: 8px 0 0 0;
+    }
+    .user-profile-cont{
+        margin-left: 14px;
+    }
+    .rate{
+        margin-right: 14px;
+    }
+}
+@media(max-width: 510px){
+    textarea{
+        width: 370px;
+    }
+}
+@media(max-width: 426px){
+    .rate{
+        position: absolute;
+        margin-left: 82px;
+        margin-top: 80px;
+    }
+    .customer-review .rate{
+        position: absolute;
+        margin-left: 62px;
+        margin-top: 78px;
+    }
+    .c-review{
+        margin-bottom: 60px;
+    }
+    .textarea-cont{
+        text-align: right;
+    }
+    .myreview{
+        margin-bottom: 60px;
+    }
+    textarea{
+        width: 360px;
+    }
+}
+@media(max-width: 380px){
+    textarea{
+        width: 330px;
+    }
+}
+@media(max-width: 347px){
+    textarea{
+        width: 300px;
+    }
 }
