@@ -288,7 +288,7 @@ body{
         display: none;
     }
     .home-bg{
-        height: 1200px;
+        height: 1100px;
     }
     .texts p, .texts a{
         margin-right: 40px;
@@ -296,7 +296,7 @@ body{
     }
     .texts{
         text-align: center;
-        margin-bottom: 40px;
+        margin-top: 40px;
     }
     .text1{
         font-size: 50px;
