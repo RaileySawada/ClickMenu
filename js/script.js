@@ -5,20 +5,20 @@ hamburger.addEventListener("click", () => {
     backdrop.classList.toggle("active");
 })
 
+/*----------MENU PAGE SCRIPT----------*/
 const dishImage = document.querySelectorAll(".dish-img");
-const dish = document.querySelector(".dish");
-let activeDishImage = null;
-let activeDish = null;
-dishImage.forEach(dishImage => {
-    dishImage.addEventListener("click", () => {
-        if((activeDishImage && activeDishImage !== dishImage) || (activeDish && activeDish !== dish)){
-            activeDishImage.classList.remove("active");
-            activeDish.classList.remove("active");
-        }
-        dishImage.classList.toggle("active");
-        dishImage.closest(".dish").classList.toggle("active");
-        /*activeDishImage = dishImage;*/
-        activeDishImage = dishImage.classList.contains("active") ? dishImage : null;
-        activeDish = dish.classList.contains("active") ? dish : null;
+dishImage.forEach(dish_img => {
+    dish_img.addEventListener("click", () => {
+        removeActiveClasses();
+        dish_img.classList.toggle("active");
+        dish_img.closest(".dish").classList.toggle("active");
     });
 });
+
+function removeActiveClasses(){
+    dishImage.forEach(dish_img => {
+        dish_img.classList.remove("active");
+        dish_img.closest(".dish").classList.remove("active");
+    });
+}
+/*----------END OF MENU PAGE SCRIPT----------*/
