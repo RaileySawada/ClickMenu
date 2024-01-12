@@ -135,6 +135,7 @@ body{
 @media (min-width: 1990px){
     .dish-menu{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 10%;
     }
 }
 @media (max-width: 1320px){

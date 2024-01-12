@@ -9,7 +9,7 @@ body{
     justify-content: space-between;
     vertical-align: top;
     display: flex;
-    margin-top: 120px;
+    margin-top: 40px;
 }
 .home-bg{
     z-index: 0;
@@ -112,6 +112,22 @@ body{
     display: inline-block;
     width: 640px;
     margin-left: 50px;
+}
+@media(min-width: 1990px){
+    .home-pic{
+        margin-left: 150px;
+    }
+    .texts{
+        margin-right: 150px;
+    }
+    .texts hr{
+        position: absolute;
+        right: 0;
+        width: 1000px;
+    }
+    .side-img{
+        width: 400px;
+    }
 }
 @media(max-width: 1378px){
     .texts p, .texts a{

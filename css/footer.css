@@ -1,6 +1,15 @@
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
 footer{
     background-color: #dea057;
     padding: 0 0 20px 0;
+    margin-top: auto;
 }
 .footer-cont{
     display: grid;
@@ -51,11 +60,6 @@ footer{
     font-weight: 700;
     text-decoration: none;
     color: black;
-}
-@media(min-width: 1990px){
-    .footer-cont{
-        margin-top: 200px;
-    }
 }
 @media(max-width: 1260px){
     .footer-cont{
