@@ -11,6 +11,7 @@ body{
     top: 100px;
     opacity: 0.7;
     z-index: -1;
+    max-height: 70%;
 }
 .subheader{
     display: flex;
@@ -59,22 +60,35 @@ body{
     margin-top: 4px;
 }
 .dish-menu{
-    margin: 0 60px 40px 60px;
+    margin: 40px 60px 120px 60px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 30px;
-    row-gap: 40px;
-    justify-content: center;
+    row-gap: 70px;
 }
 .dish{
     justify-self: center;
+    transition: all 0.1s ease-in-out;
+    height: 360px;
+    width: 220px;
+}
+.dish.active{
+    transform: scale(1.3);
+}
+.dish.active .dish-desc{
+    display: block;
+}
+.dish.active .dish-info{
+    background-color: #c58439; 
+    height: 240px;
+    margin-top: 90px
 }
 .dish-info{
-    width: 260px;
-    height: 300px;
+    width: 170px;
+    height: 150px;
     background-color: #dea057;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 20px;
     vertical-align: top;
     font-family: sans-serif;
     box-shadow: 0 4px 5px 1px rgb(43, 42, 42);
@@ -82,19 +96,21 @@ body{
     justify-self: center;
     justify-content: center;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 100px;
 }
 .dish-img{
-    width: 240px;
-    margin-top: -150px;
+    width: 150px;
+    margin-top: -110px;
+    cursor: pointer;
 }
 .dish-name{
     margin: 12px 0 28px 0;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
 }
 .dish-desc{
-    font-size: 18px;
+    display: none;
+    font-size: 14px;
     font-family: sans-serif;
     margin-bottom: 28px;
     text-align: justify;
@@ -110,7 +126,7 @@ body{
 }
 .price{
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
     text-align: start;
     margin: 0 0 0 20px;
@@ -118,6 +134,7 @@ body{
 .add{
     width: 40px;
     margin-right: 20px;
+    margin-top: -6px;
     cursor: pointer;
 }
 .btn-cont{
@@ -132,25 +149,85 @@ body{
 .per-order{
     margin: 0;
 }
+@media (min-width: 1840px){
+    .dish-menu{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
 @media (min-width: 1990px){
     .dish-menu{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        margin-bottom: 10%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+@media(min-width: 2000px){
+    .dish-menu{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
 @media (max-width: 1320px){
     .dish-menu{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 40px 20px 120px 20px;
+    }
+}
+@media (max-width: 1000px){
+    .dish-menu{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .dish{
+        width: 180px;
+    }
+    .dish-info{
+        width: 140px;
+    }
+    .dish-img{
+        width: 120px;
     }
 }
 @media (max-width: 980px){
     .dish-menu{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .price, .add{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .add{
+        width: 30px;
     }
 }
 @media (max-width: 650px){
     .dish-menu{
-        grid-template-columns: 1fr;
+        row-gap: 30px;
+        margin-top: 0;
+    }
+    .dish{
+        width: 160px;
+        height: 320px;
+    }
+    .dish.active .dish-info{
+        height: 160px;
+        width: 110px;
+    }
+    .dish-info{
+        width: 120px;
+        height: 91px;
+        margin-top: 70px;
+    }
+    .dish-img{
+        width: 100px;
+    }
+    .dish-name{
+        margin-top: 4px;
+        margin-bottom: 14px;
+    }
+    .dish-desc{
+        font-size: 10px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .dish-name, .price{
+        font-size: 16px;
     }
     .subheader{
         margin: 0 0 0 18px;
@@ -165,7 +242,15 @@ body{
         margin-left: -250px;
     }
 }
-@media(max-width: 375px){
+@media (max-width: 572px){
+    .dish-menu{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 376px){
+    .dish-menu{
+        grid-template-columns: 1fr;
+    }
     .search-bar{
         width: 80px;
     }
