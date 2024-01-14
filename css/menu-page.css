@@ -44,7 +44,7 @@ body{
     outline: none;
 }
 .search-btn{
-    height: 44px;
+    height: 40px;
     width: 66px;
     background-color: rgb(240, 240, 240);
     border-width: 1px;
@@ -99,7 +99,7 @@ body{
     margin-top: 100px;
 }
 .dish-img{
-    width: 150px;
+    width: 152px;
     margin-top: -110px;
     cursor: pointer;
 }
@@ -148,6 +148,9 @@ body{
 }
 .per-order{
     margin: 0;
+}
+.hide{
+    display: none;
 }
 @media (min-width: 1840px){
     .dish-menu{

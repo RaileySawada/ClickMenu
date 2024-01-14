@@ -40,22 +40,22 @@
             <div class="subheader">
                 <div class="selector-cont">
                     <select name="availableDishes" id="selector" title="selection">
-                        <option value="1">All</option>
-                        <option value="2">Monday</option>
-                        <option value="3">Tuesday</option>
-                        <option value="4">Wednesday</option>
-                        <option value="5">Thursday</option>
-                        <option value="6">Friday</option>
+                        <option value="All" class="option-value" onclick="filterDish('All')">All</option>
+                        <option value="Monday" class="option-value" onclick="filterDish('Monday')">Monday</option>
+                        <option value="Tuesday" class="option-value" onclick="filterDish('Tuesday')">Tuesday</option>
+                        <option value="Wednesday" class="option-value" onclick="filterDish('Wednesday')">Wednesday</option>
+                        <option value="Thursday" class="option-value" onclick="filterDish('Thursday')">Thursday</option>
+                        <option value="Friday" class="option-value" onclick="filterDish('Friday')">Friday</option>
                     </select>
                 </div>
                 <div class="search-cont">
-                    <input class="search-bar" type="text" placeholder="Search Food">
-                    <button class="search-btn" type="submit" title="search"><img class="search-logo" src="../images/search-btn.png" alt=""></button>
+                    <input id="search-bar" class="search-bar" type="search" placeholder="Search Food">
+                    <button id="search-btn" class="search-btn" type="submit" title="search"><img class="search-logo" src="../images/search-btn.png" alt=""></button>
                 </div>
             </div>
-            <div class="dish-menu">
+            <div class="dish-menu" id="dish-menu">
                 <img class="menu-bg" src="../images/backgrounds/bg-veggies.png" alt="">
-                <div class="dish">
+                <!--<div class="dish">
                     <div class="dish-info">
                         <div class="dish-img-cont">
                             <img class="dish-img" src="../images/dishes/pork-sinigang.png" alt="">
@@ -225,7 +225,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </main>
         <footer>
@@ -277,6 +277,7 @@
                 </div>
             </div>
         </footer>
+        <script src="../js/menu.js"></script>
         <script src="../js/script.js"></script>
     </body>
 </html>
