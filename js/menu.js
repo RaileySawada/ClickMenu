@@ -156,6 +156,7 @@ function filterDish(selectedDay) {
 }
 
 document.getElementById('selector').addEventListener('change', function() {
+    removeActiveClasses();
     const selectedDay = this.value;
     filterDish(selectedDay);
 });
@@ -166,6 +167,8 @@ document.getElementById("search-btn").addEventListener("click", () => {
     let searchInput = document.getElementById("search-bar").value;
     let elements = document.querySelectorAll(".dish-name");
     let dishess = document.querySelectorAll(".dish");
+
+    removeActiveClasses();
     
     elements.forEach((element, index) => {
         if(element.innerText.toUpperCase().includes(searchInput.toUpperCase())){
