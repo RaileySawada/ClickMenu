@@ -25,7 +25,7 @@ let dishes = {
             price: "300",
             day1: "Wednesday",
             day2: "Thursday",
-            day3: "Friday"
+            day3: "Monday"
         },
         {
             image: "../images/dishes/beef-steak.png",
@@ -70,7 +70,7 @@ let dishes = {
             price: "150",
             day1: "Wednesday",
             day2: "Thursday",
-            day3: "Friday"
+            day3: "Tuesday"
         },
         {
             image: "../images/dishes/menudo.png",
@@ -143,75 +143,24 @@ for(let i of dishes.data){
     add_cont.appendChild(add_img);
 }
 
-/*const selector = document.querySelectorAll(".option-value");
-selector.addEventListener("click", () => {
-    let dish = document.querySelectorAll(".dish");
-    selector.forEach((option, index) =>{
-        if(option.innerText.toUpperCase().includes(data.days[index].toUpperCase())){
-            dish[index].classList.remove("hide");
-        }
-        else{
-            dish[index].classList.add("hide");
+function filterDish(selectedDay) {
+    const allDishes = document.querySelectorAll('.dish');
+    
+    allDishes.forEach(dish => {
+        if (dish.classList.contains(selectedDay) || selectedDay === 'All') {
+            dish.classList.remove("hide");
+        } else {
+            dish.classList.add("hide");
         }
     });
-});*/
+}
 
-let seletor = document.getElementById("selector");
-let container = document.getElementsByClassName("dish");
-let main_cont = document.getElementsByClassName("dish-menu");
-
-seletor.addEventListener("change", () => {
-    const selected = seletor.target.value;
-
-    for(let i = 0; i < container.length; i++){
-        const dishesss = main_cont.children[i];
-
-        if(selected.includes("All")){
-            dishesss.classList.remove("hide");
-        }
-        else{
-            if(dishesss.toUpperCase().includes(selected.toUpperCase())){
-                dishesss.classList.remove("hide");
-            }
-            else{
-                dishesss.classList.add("hide");
-            }
-        }
-    }
+document.getElementById('selector').addEventListener('change', function() {
+    const selectedDay = this.value;
+    filterDish(selectedDay);
 });
 
-/*filterDish("All");
-
-function filterDish(value){
-    let dishesss = document.getElementsByClassName("dish");
-    if(value == "All") value = "";
-    for(let i = 0; i< dishesss.length; i++){
-        addClass(dishesss[i], "hide");
-        if(dishesss[i].className.indexOf(value) > -1) removeClass(value[i], "hide");
-    }
-}
-
-function addClass(element, name){
-    let arr1 = element.className.split(" ");
-    let arr2 = name.split(" ");
-    for(let i = 0; i < arr2.length; i++){
-        if(arr1.indexOf(arr2[i]) == -1){
-            element.className += + arr2[i];
-        }
-    }
-}
-
-function removeClass(element, name){
-    let arr1 = element.className.split(" ");
-    let arr2 = name.split(" ");
-    for(let i = 0; i < arr2.length; i++){
-        while(arr1.indexOf(arr2[i]) > -1){
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-    }
-    element.className = arr1.join(" ");
-}*/
-/*--------------------------------------------------*/
+filterDish('All');
 
 document.getElementById("search-btn").addEventListener("click", () => {
     let searchInput = document.getElementById("search-bar").value;
