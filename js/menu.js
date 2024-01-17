@@ -181,12 +181,19 @@ document.getElementById("search-btn").addEventListener("click", () => {
 });
 
 const dishImage = document.querySelectorAll(".dish-img");
-const dish = document.querySelectorAll(".dish");
+const info = document.querySelectorAll(".dish-info");
 dishImage.forEach(dish_img => {
     dish_img.addEventListener("click", () => {
         removeActiveClasses();
         dish_img.classList.toggle("active");
         dish_img.closest(".dish").classList.toggle("active");
+    });
+});
+info.forEach(information => {
+    information.addEventListener("click", () => {
+        removeActiveClasses();
+        information.classList.toggle("active");
+        information.closest(".dish").classList.toggle("active");
     });
 });
 

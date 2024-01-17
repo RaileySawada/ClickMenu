@@ -18,7 +18,7 @@ body{
     right: 0;
     margin-top: -290px;
     width: 100%;
-    height: 1000px;
+    height: 1100px;
     opacity: 0.7;
 }
 .home-pic{
@@ -90,7 +90,7 @@ body{
 }
 .mission-txt-cont{
     display: flex;
-    margin-top: 150px;
+    margin-top: 240px;
     margin-bottom: 30px;
 }
 .mission-txt{
@@ -233,13 +233,19 @@ body{
     }
 }
 @media (max-width: 883px){
+    .home-top{
+        margin-top: 0;
+    }
     .mission-txt-cont{
-        margin-top: 110px;
+        margin-top: 130px;
     }
 }
 @media (max-width: 826px){
     .mission-txt-cont{
-        margin-top: 60px;
+        margin-top: 110px;
+    }
+    .home-bg{
+        height: 1032px;
     }
 }
 @media (max-width: 769px) {
@@ -254,10 +260,10 @@ body{
     }
     .home-top{
         justify-content: center;
-        margin: 0 30px;
+        margin: 40px 30px 0 30px;
     }
     .mission-txt-cont{
-        margin-top: 190px;
+        margin-top: 200px;
     }
     .side-img{
         margin-top: 30px;
@@ -278,12 +284,17 @@ body{
         margin-top: 230px;
     }
 }
+@media (max-width: 608px){
+    .mission-txt-cont{
+        margin-top: 180px;
+    }
+}
 @media (max-width: 523px){
     .mission-txt-cont{
         margin-top: 140px;
     }
 }
-@media (max-width: 492px) {
+@media (max-width: 492px){
     .home-pic{
         display: none;
     }
@@ -321,7 +332,12 @@ body{
         margin-top: 170px;
     }
 }
-@media (max-width: 382px){
+@media (max-width: 470px){
+    .mission-txt-cont{
+        margin-top: 120px;
+    }
+}
+@media (max-width: 415px){
     .mission-txt-cont{
         margin-top: 50px;
     }
@@ -333,7 +349,17 @@ body{
         margin-right: 0;
     }
     .mission-txt-cont{
-        margin-top: 150px;
+        margin-top: 200px;
+    }
+}
+@media (max-width: 390px){
+    .mission-txt-cont{
+        margin-top: 160px;
+    }
+}
+@media (max-width: 351px){
+    .mission-txt-cont{
+        margin-top: 120px;
     }
 }
 @media (max-width: 331px){

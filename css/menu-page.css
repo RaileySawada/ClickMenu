@@ -97,6 +97,7 @@ body{
     justify-content: center;
     text-align: center;
     margin-top: 100px;
+    cursor: pointer;
 }
 .dish-img{
     width: 152px;
@@ -113,7 +114,7 @@ body{
     font-size: 14px;
     font-family: sans-serif;
     margin-bottom: 28px;
-    text-align: justify;
+    text-align: center;
 }
 .price-section{
     display: flex;
