@@ -84,6 +84,34 @@ let dishes = {
     ],
 };
 
+/*const categories = [...new Set(dishes.map((data) => {return data}))]
+let i = 0;
+
+document.getElementById('dish-menu').innerHTML = categories.map((data) =>{
+    var {image, name, description, price, day1, day2, day3} = data;
+    return(
+        `<div class='dish ${day1} ${day2} ${day3}'>
+            <div class='dish-info'>
+                <div class='dish-img-cont'>
+                    <img class='dish-img' src='${image}' alt=''>
+                </div>
+                <div class='info'>
+                    <p class='dish-name'>${name}</p>
+                    <p class='dish-desc'>${description}</p>
+                    <div class='price-section'>
+                        <div class='price-cont'>
+                            <p class='price'>₱ ${price}</p>
+                        </div>
+                        <div class='add-cont'>`+
+                            "<button class='add' oclick='addToReservation("+(i++)+")'>Add to Reservation</button>"+
+                        `</div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    )
+}).join('');*/
+
 for(let i of dishes.data){
     let dish_cont = document.createElement("div");
     dish_cont.classList.add("dish");
@@ -125,9 +153,11 @@ for(let i of dishes.data){
     let add_cont = document.createElement("div");
     add_cont.classList.add("add-cont");
 
-    let add_img = document.createElement("img");
-    add_img.setAttribute("src", "../images/add-btn.png");
-    add_img.classList.add("add");
+    let add_btn = document.createElement("button");
+    add_btn.classList.add("add");
+    add_btn.innerText = "Add to Reservation";
+    add_btn.setAttribute("onclick", "addToReservation()");
+
 
     document.getElementById("dish-menu").appendChild(dish_cont);
     dish_cont.appendChild(dish_info);
@@ -140,7 +170,7 @@ for(let i of dishes.data){
     price_section.appendChild(price_cont);
     price_cont.appendChild(price);
     price_section.appendChild(add_cont);
-    add_cont.appendChild(add_img);
+    add_cont.appendChild(add_btn);
 }
 
 function filterDish(selectedDay) {
@@ -203,3 +233,53 @@ function removeActiveClasses(){
         dish_img.closest(".dish").classList.remove("active");
     });
 }
+
+//RESERVATION
+/*var reservation = [];
+
+function addToReservation(a){
+    reservation.push({...})
+}
+
+function displayFoods(a){
+    let j = 0;
+    if(reservation.length == 0){
+        document.getElementById("order").innerHTML = "Your Cart is Empty";
+    }
+    else{
+        document.getElementById("order").innerHTML = reservation.map((items) => {
+            var {image, name, price} = items;
+            return(
+                `<div class="order">
+                    <div class="left-section">
+                        <div class="checkbox">
+                            <input class="check" type="checkbox">
+                        </div>
+                        <div class="order-pic">
+                            <img src=${image} alt="Beef Bulalo Photo">
+                        </div>
+                        <div class="order-name">
+                            <p>Beef Bulalo</p>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <div class="order-price">
+                            <p>₱ ${price}</p>
+                        </div>
+                        <div class="order-quantity">
+                            <button class="minus">-</button>
+                            <input class="qty" type="number" value="2" min="1" max="10">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="order-totalPrice">
+                            <p>₱ 600</p>
+                        </div>
+                        <div class="order-action">
+                            <p>Delete</p>
+                        </div>
+                    </div>
+                </div>`
+            );
+        }).join('');
+    }
+}*/

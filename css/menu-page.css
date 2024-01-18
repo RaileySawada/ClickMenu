@@ -64,7 +64,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 30px;
-    row-gap: 70px;
+    row-gap: 100px;
 }
 .dish{
     justify-self: center;
@@ -79,13 +79,11 @@ body{
     display: block;
 }
 .dish.active .dish-info{
-    background-color: #c58439; 
-    height: 240px;
+    background-color: #c58439;
     margin-top: 90px
 }
 .dish-info{
     width: 170px;
-    height: 150px;
     background-color: #dea057;
     padding: 20px;
     border-radius: 20px;
@@ -118,9 +116,9 @@ body{
 }
 .price-section{
     display: flex;
-}
-.price-cont, .add-cont{
-    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 .price-cont{
     width: 100%;
@@ -129,14 +127,25 @@ body{
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 700;
-    text-align: start;
-    margin: 0 0 0 20px;
+    text-align: center;
+    margin: 0 0 20px 0;
 }
 .add{
-    width: 40px;
-    margin-right: 20px;
-    margin-top: -6px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.418);
     cursor: pointer;
+}
+.add:hover{
+    background-color: rgb(244, 179, 16);
+}
+.add:active{
+    background-color: goldenrod;
+    box-shadow: none;
 }
 .btn-cont{
     margin-top: 20px;
@@ -192,17 +201,10 @@ body{
     .dish-menu{
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .price, .add{
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .add{
-        width: 30px;
-    }
 }
 @media (max-width: 650px){
     .dish-menu{
-        row-gap: 30px;
+        row-gap: 100px;
         margin-top: 0;
     }
     .dish{
@@ -210,12 +212,10 @@ body{
         height: 320px;
     }
     .dish.active .dish-info{
-        height: 160px;
         width: 110px;
     }
     .dish-info{
         width: 120px;
-        height: 91px;
         margin-top: 70px;
     }
     .dish-img{
