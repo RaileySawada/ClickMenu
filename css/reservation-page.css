@@ -32,6 +32,11 @@ body{
     justify-self: center;
     border-radius: 10px;
 }
+.order-list{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
 .order *{
     display: inline-block;
     vertical-align: middle;
@@ -51,22 +56,32 @@ body{
     margin-left: -10px;
     font-weight: 700;
 }
+.order-price p{
+    margin-left: 20px;
+}
 .qty{
-    background-color: #b3b3b3;
-    border: 1px solid #4d4d4d;
-    width: 40px;
-    height: 18px;
+    width: 30px;
+    height: 20px;
     text-align: center;
-    margin: 0;
+    margin: 0 10px;
     outline: none;
 }
+.order-quantity{
+    margin-left: 36px;
+    margin-right: 20px;
+}
 .order-quantity button{
-    width: 30px;
-    height: 22px;
-    background-color: #939393;
+    width: 26px;
+    height: 26px;
     border-radius: 0;
     border: 1px solid #4d4d4d;
     cursor: pointer;
+}
+.order-quantity button:hover{
+    background-color: #e67d06;
+}
+.order-quantity button:active{
+    background-color: #ffa845;
 }
 .order-quantity .minus{
     margin-right: -7px;
@@ -74,7 +89,10 @@ body{
 .order-quantity .plus{
     margin-left: -7px;
 }
-.order-totalPrice, .order-price{
+.order-totalPrice{
+    margin: 12px 48px;
+}
+.order-price{
     margin: 12px 40px;
 }
 .order-action p{
@@ -91,6 +109,7 @@ body{
     padding: 10px;
     font-family: sans-serif;
     border-radius: 20px 20px 0 0;
+    z-index: 69;
 }
 .checkout *{
     display: inline-block;
@@ -121,10 +140,21 @@ body{
     background-color: #e67d06;
     box-shadow: none;
 }
+.hide{
+    display: none;
+}
 @media(max-width: 1024px){
     .order, .top-section{
         margin: 5px 0;
         width: 90%;
+    }
+    .top-section{
+        width: 90%;
+    }
+    .order-list{
+        padding: 0;
+        margin: 0;
+        width: 100%;
     }
     .product{
         margin-right: 294px;
@@ -158,14 +188,20 @@ body{
     .right-section, .left-section{
         margin: 0;
     }
-    .order-quantity *{
-        margin: 0;
+    .order-price, .order-action{
+        margin-left: 16px;
     }
-    .order-quantity input{
-        height: 19px;
+    .order-quantity{
+        margin-left: 28px;
+    }
+    .order-totalPrice{
+        margin-left: 40px;
     }
 }
 @media(max-width: 970px){
+    .right-section{
+        margin-left: 20px;
+    }
     .top-section{
         display: none;
     }
@@ -226,7 +262,7 @@ body{
         margin-right: 0;
     }
 }
-@media(max-width: 580px){
+@media(max-width: 593px){
     .order-pic, .order-pic img{
         width: 90px;
         margin: 0;
@@ -268,7 +304,7 @@ body{
         font-size: 14px;
     }
 }
-@media(max-width: 530px){
+@media(max-width: 545px){
     .order-price{
         display: none;
     }
@@ -287,14 +323,17 @@ body{
         width: 90px;
     }
     .right-section{
-        width: 120px;
+        width: 140px;
         position: absolute;
         margin-top: 30px;
         text-align: left;
         right: 80px;
     }
+    .order-quantity *{
+        margin: 0;
+    }
     .order-totalPrice, .order-totalPrice p{
-        margin-left: 5px;
+        margin-left: 14px;
         margin-top: 0;
     }
 }   
