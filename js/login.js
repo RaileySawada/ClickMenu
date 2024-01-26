@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
     if(authenticated){
         window.location.href = "Pages/Home.html";
     }else{
-        alert("wrong");
+        alert("Login Failed");
     }
 })
 
