@@ -84,7 +84,7 @@ main{
 }
 textarea{
     resize: none;
-    width: 890px;
+    width: 90%;
     height: 100px;
     border-radius: 20px;
     padding: 10px;
@@ -176,6 +176,9 @@ textarea{
 .review{
     margin: 10px 0;
 }
+.logout-btn{
+    font-size: 13px;
+}
 @media(max-width: 1024px){
     .main-container{
         width: 100%;
@@ -197,7 +200,7 @@ textarea{
         width: 640px;
     }
     textarea{
-        width: 510px;
+        width: 94%;
     }
     .customer-review{
         width: 560px;
@@ -209,9 +212,6 @@ textarea{
 @media(max-width: 662px){
     .user-review{
         width: 540px;
-    }
-    textarea{
-        width: 460px;
     }
     .customer-review{
         width: 460px;
@@ -237,9 +237,6 @@ textarea{
     .user-review{
         width: 94%;
     }
-    textarea{
-        width: 410px;
-    }
     .user-profile{
         margin: 8px 0 0 0;
     }
@@ -250,9 +247,25 @@ textarea{
         margin-right: 14px;
     }
 }
-@media(max-width: 510px){
-    textarea{
-        width: 370px;
+@media(max-width: 491px){
+    .rate{
+        position: absolute;
+        margin-left: 82px;
+        margin-top: 80px;
+    }
+    .customer-review .rate{
+        position: absolute;
+        margin-left: 62px;
+        margin-top: 78px;
+    }
+    .c-review{
+        margin-bottom: 60px;
+    }
+    .textarea-cont{
+        text-align: right;
+    }
+    .myreview{
+        margin-bottom: 60px;
     }
 }
 @media(max-width: 426px){
@@ -274,18 +287,5 @@ textarea{
     }
     .myreview{
         margin-bottom: 60px;
-    }
-    textarea{
-        width: 360px;
-    }
-}
-@media(max-width: 380px){
-    textarea{
-        width: 330px;
-    }
-}
-@media(max-width: 347px){
-    textarea{
-        width: 300px;
     }
 }

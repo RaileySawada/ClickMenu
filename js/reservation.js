@@ -9,7 +9,33 @@ document.addEventListener("DOMContentLoaded", function () {
             selectedDishes.splice(index, 1);
             localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
             displaySelectedDishes(selectedDishes);
+            updateTotalPrice(selectedDishes);
         }
+    });
+    document.getElementById("orders").addEventListener("change", function (event) {
+        if (event.target.classList.contains("check")) {
+            let index = event.target.closest(".order").dataset.index;
+            let isChecked = event.target.checked;
+
+            selectedDishes[index].isChecked = isChecked;
+            localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
+
+            updateTotalPrice(selectedDishes);
+        }
+    });
+    document.querySelector(".selector input[type='checkbox']").addEventListener("change", function (event) {
+        let selectAllCheckbox = event.target;
+        let allDishCheckboxes = document.querySelectorAll(".check");
+
+        allDishCheckboxes.forEach((checkbox) => {
+            checkbox.checked = selectAllCheckbox.checked;
+
+            let index = checkbox.closest(".order").dataset.index;
+            selectedDishes[index].isChecked = selectAllCheckbox.checked;
+        });
+
+        localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
+        updateTotalPrice(selectedDishes);
     });
 });
 
@@ -134,8 +160,33 @@ function displaySelectedDish(dish, index) {
         right.appendChild(order_action);
         order_action.appendChild(action);
     }
-}
 
+}
+function deleteDish(index) {
+    let selectedDishes = JSON.parse(localStorage.getItem("selectedDishes")) || [];
+    
+    selectedDishes.splice(index, 1);
+    localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
+
+    let dishElement = document.querySelector(`.order[data-index="${index}"]`);
+    dishElement.remove();
+}
+function updateTotalPrice(selectedDishes, deletedDish) {
+    let totalPriceElement = document.querySelector(".totalPrice-txt p");
+    let total = 0;
+
+    selectedDishes.forEach((dish) => {
+        if (dish.isChecked) {
+            total += dish.price * (dish.quantity || 1);
+        }
+    });
+
+    if (deletedDish && deletedDish.isChecked) {
+        total -= deletedDish.price * (deletedDish.quantity || 1);
+    }
+
+    totalPriceElement.innerText = "₱ " + total;
+}
 function updateQuantityAndCheck(dish, change, index) {
     let selectedDishes = JSON.parse(localStorage.getItem("selectedDishes")) || [];
     dish.quantity = (dish.quantity || 1) + change;
@@ -151,14 +202,4 @@ function updateQuantityAndCheck(dish, change, index) {
     }
 
     displaySelectedDishes(selectedDishes);
-}
-
-function deleteDish(index) {
-    let selectedDishes = JSON.parse(localStorage.getItem("selectedDishes")) || [];
-    
-    selectedDishes.splice(index, 1);
-    localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
-
-    let dishElement = document.querySelector(`.order[data-index="${index}"]`);
-    dishElement.remove();
 }

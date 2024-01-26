@@ -15,6 +15,50 @@ header{
     padding: 0 20px;
     z-index: 999;
 }
+.user .profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    object-fit: cover;
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.logout-cont{
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    width: 90px;
+    background-image: linear-gradient(to bottom, #fcffe7, #fcffe755);
+    backdrop-filter: blur(5px);
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 5px 3px #000000a5;
+    text-align: center;
+    padding: 10px 0;
+}
+.clicked{
+    display: block;
+}
+.logout-btn{
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    width: 80%;
+    height: 30px;
+    background-color: #e05c04;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+}
+.logout-btn:hover{
+    background-color: #dea057;
+    box-shadow: 0 2px 3px 1px #00000082;
+}
+.logout-btn:active{
+    background-color: #c55a11;
+}
 .hamburger-menu{
     display: none;
     cursor: pointer;
@@ -54,6 +98,10 @@ header{
 nav{
     flex: 1;
     text-align: right;
+}
+nav *{
+    display: inline-block;
+    vertical-align: middle;
 }
 nav ul{
     padding: 0;
@@ -134,14 +182,14 @@ ul li a:hover{
     .backdrop-menu .link{
         display: none;
     }
+    .logout-cont{
+        right: 60px;
+        border-radius: 0 0 10px 10px;
+    }
 }
 @media (max-width: 769px){
     nav ul{
         display: none;
-    }
-    .hamburger-menu{
-        display: block;
-        float: right;
     }
     .logo, .logo-cont{
         display: flex;
@@ -159,6 +207,10 @@ ul li a:hover{
     .backdrop-menu .link{
         display: flex;
     }
+    .logout-btn{
+        font-size: 12px;
+        height: 26px;
+    }
 }
 @media (max-width: 426px){
     header{
@@ -175,6 +227,9 @@ ul li a:hover{
         width: 30px;
     }
     .backdrop-menu{
+        top: 70px;
+    }
+    .logout-cont{
         top: 70px;
     }
 }

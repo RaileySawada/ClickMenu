@@ -246,5 +246,5 @@ function addToReservation(dish) {
 
     setTimeout(() => {
         successMessage.classList.add("hide");
-    }, 1000);
+    }, 1500);
 }
