@@ -349,17 +349,17 @@ body{
         margin-right: 0;
     }
     .mission-txt-cont{
-        margin-top: 200px;
+        margin-top: 160px;
     }
 }
 @media (max-width: 390px){
     .mission-txt-cont{
-        margin-top: 160px;
+        margin-top: 120px;
     }
 }
 @media (max-width: 351px){
     .mission-txt-cont{
-        margin-top: 120px;
+        margin-top: 100px;
     }
 }
 @media (max-width: 331px){

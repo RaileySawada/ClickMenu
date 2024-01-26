@@ -130,7 +130,19 @@ for(let i of dishes.data){
     add_btn.innerText = "Add to Reservation";
     add_btn.setAttribute("onclick", `addToReservation(${JSON.stringify(i)})`);
 
+    let notFound = document.createElement("p");
+    notFound.setAttribute("id","not-found-message");
+    notFound.classList.add("hide");
+    notFound.innerText = "Dish Not Found";
+
+    let successMsg = document.createElement("p");
+    successMsg.setAttribute("id","success-message");
+    successMsg.classList.add("hide");
+    successMsg.innerText = "Dish Added to reservation successfully";
+
     document.getElementById("dish-menu").appendChild(dish_cont);
+    document.getElementById("dish-menu").appendChild(notFound);
+    document.getElementById("dish-menu").appendChild(successMsg);
     dish_cont.appendChild(dish_info);
     dish_info.appendChild(dish_img_cont);
     dish_img_cont.appendChild(dish_img);
@@ -146,7 +158,8 @@ for(let i of dishes.data){
 
 function filterDish(selectedDay) {
     const allDishes = document.querySelectorAll('.dish');
-    
+    let notFoundMessage = document.getElementById("not-found-message");
+    notFoundMessage.classList.add("hide");
     allDishes.forEach(dish => {
         if (dish.classList.contains(selectedDay) || selectedDay === 'All') {
             dish.classList.remove("hide");
@@ -168,17 +181,27 @@ document.getElementById("search-btn").addEventListener("click", () => {
     let searchInput = document.getElementById("search-bar").value;
     let elements = document.querySelectorAll(".dish-name");
     let dishess = document.querySelectorAll(".dish");
+    let notFoundMessage = document.getElementById("not-found-message");
+
 
     removeActiveClasses();
+
+    let found = false;
     
     elements.forEach((element, index) => {
         if(element.innerText.toUpperCase().includes(searchInput.toUpperCase())){
             dishess[index].classList.remove("hide");
+            found = true;
         }
         else{
             dishess[index].classList.add("hide");
         }
     });
+    if(!found){
+        notFoundMessage.classList.remove("hide");
+    } else{
+        notFoundMessage.classList.add("hide");
+    }
 });
 
 const dishImage = document.querySelectorAll(".dish-img");
@@ -210,13 +233,18 @@ function addToReservation(dish) {
     let existingDishIndex = selectedDishes.findIndex((selectedDish) => selectedDish.name === dish.name);
 
     if (existingDishIndex !== -1) {
-        // If the dish already exists, update the quantity
         selectedDishes[existingDishIndex].quantity = (selectedDishes[existingDishIndex].quantity || 1) + 1;
     } else {
-        // If the dish doesn't exist, add it to the list
         dish.quantity = 1;
         selectedDishes.push(dish);
     }
 
     localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
+
+    const successMessage = document.getElementById("success-message");
+    successMessage.classList.remove("hide");
+
+    setTimeout(() => {
+        successMessage.classList.add("hide");
+    }, 1000);
 }

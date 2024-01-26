@@ -361,13 +361,18 @@ body{
         right: 44px;
     }
 }
+@media(max-width: 426px){
+    .selectAll-txt{
+        width: 90px;
+    }
+}
 @media(max-width: 376px){
     .selector, .selector input{
         margin-left: 2px;
         margin-right: 1px;
     }
     .selectAll-txt, .selectAll-txt p{
-        width: 62px;
+        width: 80px;
     }
 }
 @media(max-width: 321px){

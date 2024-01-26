@@ -16,10 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function displaySelectedDishes(selectedDishes) {
     let reservationContainer = document.getElementById("order-list");
     
-    // Clear the existing display
     reservationContainer.innerHTML = "";
 
-    // Redraw the updated list
     selectedDishes.forEach((dish, index) => {
         displaySelectedDish(dish, index);
     });
@@ -32,7 +30,6 @@ function displaySelectedDish(dish, index) {
     let existingDishElement = document.querySelector(`.order[data-name="${dish.name}"]`);
 
     if (existingDishElement) {
-        // If the dish already exists, update the quantity and total price
         let quantityElement = existingDishElement.querySelector(".qty");
         let quantity = parseInt(quantityElement.innerText) + (dish.quantity || 1);
         quantityElement.innerText = quantity;
@@ -40,7 +37,6 @@ function displaySelectedDish(dish, index) {
         let totalPriceElement = existingDishElement.querySelector(".order-totalPrice p");
         totalPriceElement.innerText = "₱" + (dish.price * parseInt(quantity));
 
-        // Update the quantity in the local storage
         let existingDish = selectedDishes.find((selectedDish) => selectedDish.name === dish.name);
         existingDish.quantity = quantity;
         localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
@@ -144,15 +140,12 @@ function updateQuantityAndCheck(dish, change, index) {
     let selectedDishes = JSON.parse(localStorage.getItem("selectedDishes")) || [];
     dish.quantity = (dish.quantity || 1) + change;
     if (dish.quantity < 1) {
-        // Remove the dish from local storage
         selectedDishes.splice(index, 1);
         localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
 
-        // Remove the corresponding element from the DOM
         let dishElement = document.querySelector(`.order[data-index="${index}"]`);
         dishElement.remove();
     } else {
-        // Update the quantity in the local storage
         selectedDishes[index] = dish;
         localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
     }
@@ -160,20 +153,12 @@ function updateQuantityAndCheck(dish, change, index) {
     displaySelectedDishes(selectedDishes);
 }
 
-/*function deleteDish(dish, index) {
-    let selectedDishes = JSON.parse(localStorage.getItem("selectedDishes")) || [];
-    selectedDishes.splice(index, 1);
-    localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
-    displaySelectedDishes(selectedDishes);
-}*/
 function deleteDish(index) {
     let selectedDishes = JSON.parse(localStorage.getItem("selectedDishes")) || [];
     
-    // Remove the dish from local storage
     selectedDishes.splice(index, 1);
     localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
 
-    // Remove the corresponding element from the DOM
     let dishElement = document.querySelector(`.order[data-index="${index}"]`);
     dishElement.remove();
 }
