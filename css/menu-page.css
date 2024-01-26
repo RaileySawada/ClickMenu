@@ -174,7 +174,7 @@ body{
     border-radius: 10px;
 }
 #success-message{
-    position: absolute;
+    position: fixed;
     justify-self: center;
     font-family: sans-serif;
     font-size: 20px;
@@ -273,6 +273,12 @@ body{
 @media (max-width: 572px){
     .dish-menu{
         grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 426px){
+    #success-message{
+        font-size: 12px;
+        width: 240px;
     }
 }
 @media(max-width: 376px){

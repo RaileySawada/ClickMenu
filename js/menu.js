@@ -138,7 +138,7 @@ for(let i of dishes.data){
     let successMsg = document.createElement("p");
     successMsg.setAttribute("id","success-message");
     successMsg.classList.add("hide");
-    successMsg.innerText = "Dish Added to reservation successfully";
+    successMsg.innerText = "Dish added to reservation successfully";
 
     document.getElementById("dish-menu").appendChild(dish_cont);
     document.getElementById("dish-menu").appendChild(notFound);
