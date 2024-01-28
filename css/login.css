@@ -601,12 +601,16 @@ button, .button{
     }
     .wrapper{
         padding: 0 40px;
+        width: 100%;
     }
     .dish-container{
-        width: 290px;
+        width: 260px;
     }
     .dish-info{
-        width: 270px;
+        width: 240px;
+    }
+    .dish-pic{
+        width: 160px;
     }
 }
 @media(max-width: 426px){
