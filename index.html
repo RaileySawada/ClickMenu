@@ -6,21 +6,159 @@
         <link rel="shortcut icon" href="images/site-icon.ico" type="image/x-icon">
         <title>ClickMenu</title>
         <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
     <body>
+        <header>
+            <a class="logo-cont" href="index.html"><img class="logo" src="images/logo.png" alt="ClickMenu-Logo"></a>
+            <a class="home-link" href="index.html"><p>ClickMenu</p></a>
+        </header>
         <main>
-            <div class="top-section">
+            <div class="container" id="blur">
+                <div class="top-section">
+                    <img src="images/backgrounds/top-bg2.webp" alt="" class="top-bg">
+                    <div class="intro">
+                        <h1 class="title">ClickMenu</h1>
+                        <div class="txt-cont">
+                            <p class="intro-txt">Join us as we embrace the intersection of tradition and technology, where the heartwarming essence of carenderias meets 
+                                the convenience of the digital age. Settle in at the table, savor a variety of Filipino cuisines, and join a community that honors the tradition 
+                                of home-cooked meals. Let's enjoy Philippine cuisine together and turn every meal into a celebration of our rich culinary history.</p>
+                        </div>
+                        <button class="join-btn">Join Now</button>
+                    </div>
+                </div>
+                <div class="mid-section">
+                        <p class="text-section">Embark on a culinary adventure with us as we redefine the way you experience local carenderias. Our commitment goes beyond just digitizing the 
+                            process &mdash; we're dedicated to preserving the authenticity of Filipino culinary traditions. Through our platform, you not only have the convenience 
+                            of online reservations but also gain access to a curated selection of time-honored recipes passed down through generations.
+                        <br><br>In our mission to bridge the gap between tradition and technology, we've incorporated user-friendly features that let you explore the diverse 
+                            landscape of Filipino cuisine effortlessly. From classic adobo to regional specialties, our platform showcases the vibrant tapestry of flavors 
+                            that make Filipino food truly unique. Each carenderia on our platform represents a piece of the rich culinary mosaic that defines the Philippines.
+                        <br><br>our journey doesn't stop at reservations. We're committed to creating a community where food enthusiasts, both local and global, can connect and 
+                            share their love for Filipino dishes. Engage in discussions, discover hidden gems, and learn the stories behind your favorite meals. It's a space 
+                            where the passion for food and the appreciation for cultural heritage converge.</p>
+                        <div class="main-dishes-cont">
+                            <h1 class="main-dishes">Main Dishes</h1>
+                            <img src="images/dishes/sisig.png" alt="sisig" class="dish sisig">
+                            <p class="dish-name a">Sisig</p>
+                            <img src="images/dishes/beef-bulalo.png" alt="bulalo" class="dish bulalo">
+                            <p class="dish-name b">Beef Bulalo</p>
+                            <img src="images/dishes/beef-steak.png" alt="bulalo" class="dish steak">
+                            <p class="dish-name c">Beef Steak</p>
+                            <img src="images/dishes/bicol-express.png" alt="bulalo" class="dish bicol-express">
+                            <p class="dish-name d">Bicol Express</p>
+                        </div>
+                        <img src="images/backgrounds/top-bg.png" alt="" class="right-img">
+                    </div>
+                </div>
+                <div class="bot-section">
+                    <div class="top-txt">
+                        <h1>Other Dishes</h1>
+                        <hr size="4" width="300px" color="black">
+                    </div>
+                    <div class="carousel-cont">
+                        <div class="wrapper">
+                            <i id="left" class="fa-solid fa-angle-left"></i>
+                            <ul class="carousel">
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/pork-sinigang.png" alt="img" class="dish-pic">
+                                        <p class="name">Pork Sinigang</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Good Quality Pork extra tamarind and vegetables</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/beef-kaldereta.png" alt="img" class="dish-pic">
+                                        <p class="name">Beef Kaldereta</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Tender beef simmered in a hot tomato sauce and vegetables</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/beef-bulalo.png" alt="img" class="dish-pic">
+                                        <p class="name">Beef Bulalo</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Soup of tender beef shanks and marrow bones and vegetables</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/beef-steak.png" alt="img" class="dish-pic">
+                                        <p class="name">Beef Steak</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Succulent slices of beef marinated and cooked in a savory soy-citrus sauce</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/pinakbet.png" alt="img" class="dish-pic">
+                                        <p class="name">Pinakbet</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Colorful medley of mixed vegetables, simmered in shrimp paste</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/bicol-express.png" alt="img" class="dish-pic">
+                                        <p class="name">Bicol Express</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Bold and fiery flavors of Bicolano cuisine, spicy coconut stew with pork, chilies</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/pork-karekare.png" alt="img" class="dish-pic">
+                                        <p class="name">Pork Kare-kare</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Rich and creamy stew featuring tender pork, tripe and savory peanut sauce</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/sisig.png" alt="img" class="dish-pic">
+                                        <p class="name">Sisig</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Sizzling dish finely chopped of season pork face, and onions with egg</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dish-container">
+                                    <div class="dish-info" draggable="false">
+                                        <img src="images/dishes/menudo.png" alt="img" class="dish-pic">
+                                        <p class="name">Menudo</p>
+                                        <div class="desc-cont">
+                                            <p class="desc">Scrumptiously rich tomato based stew of pork meat, liver, and hint of sweetness</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <i id="right" class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forms">
+                <button class="close">Close</button>
                 <input type="checkbox" id="chk" aria-hidden="true">
                 <div class="signup">
                     <form>
                         <label for="chk" aria-hidden="true">Sign up</label>
-                        <input type="text" name="txt" placeholder="User name" required>
+                        <input type="text" name="txt" placeholder="Username" required>
                         <input type="email" name="email" placeholder="Email" required>
                         <input type="password" name="pswd" placeholder="Password" required>
-                        <button>Sign up</button>
+                        <button class="signup-btn">Sign up</button>
                     </form>
                 </div>
-    
                 <div class="login">
                     <form class="login-form">
                         <label for="chk" aria-hidden="true">Login</label>
@@ -30,8 +168,6 @@
                     </form>
                 </div>
             </div>
-            <div class="mid-section"></div>
-            <div class="bot-section"></div>
         </main>
         <script src="js/login.js"></script>
     </body>
