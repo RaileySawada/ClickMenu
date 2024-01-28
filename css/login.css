@@ -202,23 +202,20 @@ button, .button{
 }
 .close{
     position: fixed;
-    top: 0px;
-    right: -50px;
+    width: 60px;
+    height: 26px;
+    border-radius: 0 10px 0 10px;
+    top: -20px;
+    right: 0px;
     z-index: 999;
     cursor: pointer;
     display: none;
-    background-color: #00000000;
-    text-decoration: underline;
-    color: red;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+    background-color: red;
+    color: #fff;
     transition: all 0.1s ease-in-out;
 }
 .close:hover{
-    color: #f14848;
+    color: #a5a5a5;
 }
 .forms.show, .close.show{
     display: block;
