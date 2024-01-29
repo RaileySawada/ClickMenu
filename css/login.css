@@ -620,6 +620,9 @@ button, .button{
         margin: 0 40px;
         font-size: 16px;
     }
+    .carousel-cont{
+        height: 400px;
+    }
 }
 @media(max-width: 426px){
     .forms{
