@@ -206,7 +206,7 @@ button, .button{
     height: 26px;
     border-radius: 0 10px 0 10px;
     top: -20px;
-    right: 0px;
+    right: -5px;
     z-index: 999;
     cursor: pointer;
     display: none;
@@ -366,10 +366,10 @@ button, .button{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 480px;
     margin-bottom: 60px;
-    padding: 0 35px;
     border-radius: 20px;
+    padding: 0 10px;
     width: 80%;
 }
 .wrapper i{
@@ -593,21 +593,32 @@ button, .button{
     .top-txt hr{
         width: 230px;
     }
-    .carousel-cont{
-        width: 70%;
-    }
     .wrapper{
         padding: 0 40px;
-        width: 100%;
+        width: 90%;
     }
     .dish-container{
-        width: 260px;
+        width: 200px;
     }
     .dish-info{
-        width: 240px;
+        width: 180px;
+        height: 280px;
     }
     .dish-pic{
-        width: 160px;
+        width: 120px;
+        margin-top: 10px;
+    }
+    .name{
+        font-size: 20px;
+        margin: 0;
+    }
+    .desc-cont{
+        height: 80px;
+        margin: 0 10px;
+    }
+    .desc{
+        margin: 0 40px;
+        font-size: 16px;
     }
 }
 @media(max-width: 426px){
@@ -667,12 +678,6 @@ button, .button{
     .bicol-express{
         top: 620px;
         left: 170px;
-    }
-    .dish-container{
-        width: 274px;
-    }
-    .dish-info{
-        width: 254px;
     }
 }
 @media(max-width: 360px){

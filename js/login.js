@@ -68,14 +68,24 @@ const dragStart = (e) => {
     carousel.classList.add("dragging");
     startX = e.pageX;
     startScrollLeft = carousel.scrollLeft;
+    touchStartX = e.touches ? e.touches[0].pageX : null;
+    touchDeltaX = 0;
 }
 const dragging = (e) => {
     if(!isDragging) return;
     carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    if (e.touches && e.touches.length > 0) {
+        touchDeltaX = touchStartX - e.touches[0].pageX;
+    }
 }
 const dragStop = () => {
     isDragging = false;
     carousel.classList.remove("dragging");
+    if (Math.abs(touchDeltaX) > 50) {
+        carousel.scrollLeft += touchDeltaX > 0 ? firstCardWidth : -firstCardWidth;
+    }
+    touchStartX = null;
+    touchDeltaX = 0;
 }
 const infiniteScroll = () => {
     if(carousel.scrollLeft === 0) {
@@ -99,6 +109,9 @@ autoPlay();
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("touchstart", dragStart);
+carousel.addEventListener("touchmove", dragging);
+document.addEventListener("touchend", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
