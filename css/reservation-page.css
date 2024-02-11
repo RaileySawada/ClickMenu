@@ -143,6 +143,88 @@ body{
 .hide{
     display: none;
 }
+.nodish-txt{
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #4d4d4d84;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 200px;
+    justify-self: center;
+}
+.popup-container{
+    position: fixed;
+    justify-self: center;
+    top: 20px;
+    z-index: 999;
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #fff;
+    padding: 40px 20px 20px 20px;
+    box-shadow: 0 2px 2px 3px #80808072;
+    border-radius: 20px;
+    width: 600px;
+}
+.popup-dish-info{
+    display: flex;
+    background-color: #fcffe7;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 3px #80808072;
+    margin-bottom: 10px;
+}
+.popup-dish-image, .popup-dish-details{
+    display: inline-block;
+}
+.popup-dish-image{
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+}
+.popup-dish-details{
+    display: flex;
+    align-items: center;
+}
+.popup-dish-details p{
+    margin-left: 20px;
+    font-size: 16px;
+}
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    background-color: red;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    border-radius: 0 20px 0 10px;
+    padding: 4px 10px;
+    color: white;
+    border: none;
+}
+.order-btn{
+    color: white;
+    background-color: #e05c04;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 1px #80808072;
+    cursor: pointer;
+}
+.order-btn:hover{
+    background-color: #dea057;
+}
+.order-btn:active{
+    box-shadow: none;
+}
+.popup-dish-details p:nth-child(1){
+    font-weight: 700;
+    margin-left: 40px;
+}
+.totalPrice{
+    font-size: 16px;
+}
 @media(max-width: 1024px){
     .order, .top-section{
         margin: 5px 0;
@@ -260,6 +342,22 @@ body{
     }
     .checkout-btn-div, .checkout-btn{
         margin-right: 0;
+    }
+}
+@media(max-width: 670px){
+    .popup-container{
+        width: 80%;
+    }
+    .popup-dish-image{
+        width: 70px;
+        height: 70px;
+    }
+    .popup-dish-details{
+        display: block;
+    }
+    .popup-dish-details p, .popup-dish-details p:nth-child(1){
+        font-size: 14px;
+        margin-left: 20px;
     }
 }
 @media(max-width: 593px){

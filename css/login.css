@@ -623,6 +623,9 @@ button, .button{
     .carousel-cont{
         height: 400px;
     }
+    .wrapper .carousel{
+        grid-auto-columns: calc((100% / 2)-12px);
+    }
 }
 @media(max-width: 426px){
     .forms{

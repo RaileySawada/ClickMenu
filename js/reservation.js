@@ -37,6 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("selectedDishes", JSON.stringify(selectedDishes));
         updateTotalPrice(selectedDishes);
     });
+    document.getElementById("checkout-btn").addEventListener("click", function () {
+        let totalSelectedPrice = calculateTotalPrice(selectedDishes);
+
+        if (totalSelectedPrice > 0) {
+            displayPopupContainer(getCheckedDishes(selectedDishes));
+        } else {
+            alert("Please select at least one dish before checking out.");
+        }
+    });
 });
 
 function displaySelectedDishes(selectedDishes) {
@@ -44,9 +53,16 @@ function displaySelectedDishes(selectedDishes) {
     
     reservationContainer.innerHTML = "";
 
-    selectedDishes.forEach((dish, index) => {
-        displaySelectedDish(dish, index);
-    });
+    if (selectedDishes.length === 0) {
+        let noDishesReserved = document.createElement("p");
+        noDishesReserved.classList.add("nodish-txt")
+        noDishesReserved.innerText = "No dish/dishes reserved";
+        reservationContainer.appendChild(noDishesReserved);
+    } else {
+        selectedDishes.forEach((dish, index) => {
+            displaySelectedDish(dish, index);
+        });
+    }
 }
 
 function displaySelectedDish(dish, index) {
@@ -128,8 +144,10 @@ function displaySelectedDish(dish, index) {
         let order_totalPrice = document.createElement("div");
         order_totalPrice.classList.add("order-totalPrice");
 
+        var totalP = (dish.price * parseInt(qty.innerText));
+
         let totalPrice = document.createElement("p");
-        totalPrice.innerText = "₱" + (dish.price * parseInt(qty.innerText));
+        totalPrice.innerText = "₱" + totalP;
 
         let order_action = document.createElement("div");
         order_action.classList.add("order-action");
@@ -202,4 +220,123 @@ function updateQuantityAndCheck(dish, change, index) {
     }
 
     displaySelectedDishes(selectedDishes);
+}
+
+function displayPopupContainer(selectedDishes) {
+    let popupContainer = document.createElement("div");
+    popupContainer.classList.add("popup-container");
+    let popupContent = document.createElement("div");
+    popupContent.setAttribute("id","popup-content");
+
+    let closeButton = document.createElement("button");
+    closeButton.classList.add("close-btn");
+    closeButton.innerText = "X";
+    closeButton.addEventListener("click", function () {
+        popupContainer.style.display = "none";
+    });
+
+    document.getElementById("order-list").appendChild(popupContainer);
+    popupContainer.appendChild(popupContent);
+    popupContainer.appendChild(closeButton);
+
+    popupContent.innerHTML = "";
+
+    if (selectedDishes.length > 0) {
+        selectedDishes.forEach((dish) => {
+            let dishInfoContainer = document.createElement("div");
+            dishInfoContainer.classList.add("popup-dish-info");
+
+            let dishImage = document.createElement("img");
+            dishImage.classList.add("popup-dish-image");
+            dishImage.setAttribute("src", dish.image);
+            dishInfoContainer.appendChild(dishImage);
+
+            let dishInfo = document.createElement("div");
+            dishInfo.classList.add("popup-dish-details");
+
+            let nameInfo = document.createElement("p");
+            nameInfo.classList.add("popup-dish-name");
+            nameInfo.innerText = `${dish.name}`;
+            dishInfo.appendChild(nameInfo);
+
+            let quantityInfo = document.createElement("p");
+            quantityInfo.innerText = `Quantity: ${dish.quantity || 1}`;
+            dishInfo.appendChild(quantityInfo);
+
+            let totalPriceInfo = document.createElement("p");
+            totalPriceInfo.innerText = `Total Price: ₱ ${dish.price * (dish.quantity || 1)}`;
+            dishInfo.appendChild(totalPriceInfo);
+
+            dishInfoContainer.appendChild(dishInfo);
+            popupContent.appendChild(dishInfoContainer);
+        });
+
+        let totalInfo = document.createElement("p");
+        totalInfo.classList.add("totalPrice");
+        totalInfo.innerText = `Total Price: ₱ ${calculateTotalPrice(selectedDishes)}`;
+        popupContent.appendChild(totalInfo);
+
+        let orderButton = document.createElement("button");
+        orderButton.classList.add("order-btn");
+        orderButton.innerText = "Place Order";
+        orderButton.addEventListener("click", function () {
+            moveSelectedDishesToOrders(selectedDishes);
+            popupContainer.style.display = "none";
+            alert("Order Placed! Redirecting to Orders page...");
+            setTimeout(function () {
+                window.location.href = "../Pages/Orders.html";
+            }, 2000);
+        });
+
+        popupContent.appendChild(orderButton);
+    }
+}
+
+function calculateTotalPrice(selectedDishes) {
+    let total = 0;
+
+    selectedDishes.forEach((dish) => {
+        if (dish.isChecked) {
+            total += dish.price * (dish.quantity || 1);
+        }
+    });
+
+    return total;
+}
+
+function getCheckedDishes(selectedDishes) {
+    return selectedDishes.filter(dish => dish.isChecked);
+}
+
+function moveSelectedDishesToOrders(selectedDishes) {
+    // Retrieve existing orders from localStorage or initialize an empty array
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    // Filter out selected dishes that are checked
+    let checkedDishes = selectedDishes.filter((dish) => dish.isChecked);
+
+    // Add checked dishes to the orders array
+    orders = orders.concat(checkedDishes);
+
+    // Save the updated orders array to localStorage
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    // Delete the selected dishes from the reservation page
+    deleteSelectedDishesFromReservation(selectedDishes);
+}
+
+function deleteSelectedDishesFromReservation(selectedDishes) {
+    selectedDishes.forEach((dish) => {
+        // Find the index of the dish in the reservation page
+        let index = selectedDishes.findIndex((selectedDish) => selectedDish.name === dish.name);
+
+        // Remove the dish element from the reservation page
+        let dishElement = document.querySelector(`.order[data-index="${index}"]`);
+        if (dishElement) {
+            dishElement.remove();
+        }
+    });
+
+    // Clear the selected dishes from localStorage
+    localStorage.removeItem("selectedDishes");
 }
