@@ -34,10 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const userReviewForm = document.querySelector('.user-review');
     const usersReviewContainer = document.querySelector('.users-review');
 
-    // Retrieve existing reviews from localStorage on page load
     const storedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
 
-    // Display existing reviews
     storedReviews.forEach((review) => {
         usersReviewContainer.appendChild(createReviewElement(review));
     });
@@ -57,16 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 review: reviewTextarea.value,
             };
 
-            // Save the new review to localStorage
             storedReviews.unshift(newReview);
             localStorage.setItem('reviews', JSON.stringify(storedReviews));
 
-            // Display the new review
             usersReviewContainer.insertBefore(createReviewElement(newReview), usersReviewContainer.firstChild);
 
-            // Clear form after submitting
             userReviewForm.reset();
-            // Reset stars
             dqStar.forEach((star) => {
                 star.classList.replace('bxs-star', 'bx-star');
                 star.classList.remove('active');

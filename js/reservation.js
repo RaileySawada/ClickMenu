@@ -309,25 +309,19 @@ function getCheckedDishes(selectedDishes) {
 }
 
 function moveSelectedDishesToOrders(selectedDishes) {
-    // Retrieve existing orders from localStorage or initialize an empty array
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-    // Filter out selected dishes that are checked
     let checkedDishes = selectedDishes.filter((dish) => dish.isChecked);
 
-    // Add checked dishes to the orders array
     orders = orders.concat(checkedDishes);
 
-    // Save the updated orders array to localStorage
     localStorage.setItem("orders", JSON.stringify(orders));
 
-    // Delete the selected dishes from the reservation page
     deleteSelectedDishesFromReservation(selectedDishes);
 }
 
 function deleteSelectedDishesFromReservation(selectedDishes) {
     selectedDishes.forEach((dish) => {
-        // Find the index of the dish in the reservation page
         let index = selectedDishes.findIndex((selectedDish) => selectedDish.name === dish.name);
 
         // Remove the dish element from the reservation page
@@ -337,6 +331,5 @@ function deleteSelectedDishesFromReservation(selectedDishes) {
         }
     });
 
-    // Clear the selected dishes from localStorage
     localStorage.removeItem("selectedDishes");
 }
