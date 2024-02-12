@@ -324,7 +324,6 @@ function deleteSelectedDishesFromReservation(selectedDishes) {
     selectedDishes.forEach((dish) => {
         let index = selectedDishes.findIndex((selectedDish) => selectedDish.name === dish.name);
 
-        // Remove the dish element from the reservation page
         let dishElement = document.querySelector(`.order[data-index="${index}"]`);
         if (dishElement) {
             dishElement.remove();

@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitBtn = document.querySelector('.submit-btn');
     const userReviewForm = document.querySelector('.user-review');
     const usersReviewContainer = document.querySelector('.users-review');
+    const userNameInput = document.querySelector('.username');
 
     const storedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
 
@@ -45,10 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const selectedSSStars = document.querySelectorAll('.rating-ss .star.active');
         const reviewTextarea = document.querySelector('.user-review textarea');
         const selectedOrder = document.getElementById('order-selector').value;
+        const userName = userNameInput.value || 'Your Name';
 
         if (selectedDQStars.length > 0 && selectedSSStars.length > 0 && reviewTextarea.value.trim() !== '') {
             const newReview = {
-                name: 'Your Name',
+                name: userName,
                 order: getSelectedDishName(selectedOrder),
                 dqStars: selectedDQStars.length,
                 ssStars: selectedSSStars.length,
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <img class="customer-profile" src="../images/user-profiles/main-profile.jpg" alt="Customer's Profile">
                     </div>
                     <div class="customer">
-                        <p class="customer-name">${review.name}</p>
+                        <p class="customer-name">Railey Dela Peña</p>
                         <p class="customer-order">Order: <span>${review.order}</span></p>
                     </div>
                     <div class="rate">
@@ -105,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="row review-section">
                 <div class="review-txt-cont">
-                    <p class="review">${review.review}</p>
+                    <pre class="review">${review.review}</pre>
                 </div>
             </div>
         `;
