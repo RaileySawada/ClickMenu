@@ -70,18 +70,13 @@ function displaySelectedDish(dish, index) {
 function moveSelectedDishesToOrders(selectedDishes) {
     let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-    // Filter out selected dishes that are checked
     let checkedDishes = selectedDishes.filter((dish) => dish.isChecked);
 
-    // Add checked dishes to the orders array
     orders = orders.concat(checkedDishes);
 
-    // Save the updated orders array to localStorage
     localStorage.setItem("orders", JSON.stringify(orders));
 
-    // Clear the selected dishes from localStorage
     localStorage.removeItem("orders");
 
-    // Clear the selected dishes from the reservation page
     displaySelectedDishes([]);
 }

@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../css/review-page.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
         <header>
@@ -47,7 +48,7 @@
         </header>
         <main>
             <div class="main-container">
-                <div class="user-review">
+                <form action="#" class="user-review">
                     <div class="row top-section">
                         <div class="myreview">
                             <div class="user-profile-cont">
@@ -74,11 +75,25 @@
                             <div class="rate">
                                 <div class="dish-quality">
                                     <p>Dish Quality</p>
-                                    <img class="star" src="../images/star.png" alt="star">
+                                    <div class="rating-dq">
+                                        <input type="number" name="rating" hidden>
+                                        <i class='bx bx-star star'></i>
+                                        <i class='bx bx-star star'></i>
+                                        <i class='bx bx-star star'></i>
+                                        <i class='bx bx-star star'></i>
+                                        <i class='bx bx-star star'></i>
+                                    </div>
                                 </div>
                                 <div class="seller-service">
                                     <p>Seller Service</p>
-                                    <img class="star" src="../images/star.png" alt="star">
+                                    <div class="rating-ss">
+                                        <input type="number" name="rating" hidden>
+                                        <i class='bx bx-star star'></i>
+                                        <i class='bx bx-star star'></i>
+                                        <i class='bx bx-star star'></i>
+                                        <i class='bx bx-star star'></i>
+                                        <i class='bx bx-star star'></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -89,12 +104,12 @@
                         </div>
                         <div class="button-cont">
                             <div class="buttons">
-                                <button class="cancel-btn">Cancel</button>
+                                <button class="cancel-btn" type="button">Cancel</button>
                                 <button class="submit-btn">Submit</button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
 
                 <div class="users-review">
                     <div class="row customer-review">
@@ -110,11 +125,25 @@
                                 <div class="rate">
                                     <div class="dish-quality">
                                         <p>Dish Quality</p>
-                                        <img src="../images/star.png" alt="star" class="star">
+                                        <div class="users-rate dishQuality">
+                                            <input type="number" name="rating" hidden>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                        </div>
                                     </div>
                                     <div class="seller-service">
                                         <p>Seller Service</p>
-                                        <img src="../images/star.png" alt="star" class="star">
+                                        <div class="users-rate sellerService">
+                                            <input type="number" name="rating" hidden>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -139,11 +168,25 @@
                                 <div class="rate">
                                     <div class="dish-quality">
                                         <p>Dish Quality</p>
-                                        <img src="../images/star.png" alt="star" class="star">
+                                        <div class="users-rate dishQuality">
+                                            <input type="number" name="rating" hidden>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                        </div>
                                     </div>
                                     <div class="seller-service">
                                         <p>Seller Service</p>
-                                        <img src="../images/star.png" alt="star" class="star">
+                                        <div class="users-rate sellerService">
+                                            <input type="number" name="rating" hidden>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -168,11 +211,25 @@
                                 <div class="rate">
                                     <div class="dish-quality">
                                         <p>Dish Quality</p>
-                                        <img src="../images/star.png" alt="star" class="star">
+                                        <div class="users-rate dishQuality">
+                                            <input type="number" name="rating" hidden>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                        </div>
                                     </div>
                                     <div class="seller-service">
                                         <p>Seller Service</p>
-                                        <img src="../images/star.png" alt="star" class="star">
+                                        <div class="users-rate sellerService">
+                                            <input type="number" name="rating" hidden>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                            <i class='bx bxs-star star'></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
